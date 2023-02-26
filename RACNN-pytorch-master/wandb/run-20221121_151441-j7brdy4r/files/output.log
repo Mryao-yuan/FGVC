@@ -1,0 +1,119 @@
+
+ [*] Set cuda: True
+ [*] Loading dataset...
+ [*] pre_apn_epoch[0], || pre_apn_iter 0 || pre_apn_loss: 0.0717 || Timer: 4.1287sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 20 || pre_apn_loss: 0.0499 || Timer: 0.1434sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 40 || pre_apn_loss: 0.0242 || Timer: 0.1433sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 60 || pre_apn_loss: 0.0502 || Timer: 0.1410sec
+(281, 500, 3)
+ [*] pre_apn_epoch[0], || pre_apn_iter 80 || pre_apn_loss: 0.0278 || Timer: 0.1577sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 100 || pre_apn_loss: 0.0400 || Timer: 0.1450sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 120 || pre_apn_loss: 0.0671 || Timer: 0.1527sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 140 || pre_apn_loss: 0.0265 || Timer: 0.1685sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 160 || pre_apn_loss: 0.0260 || Timer: 0.1489sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 180 || pre_apn_loss: 0.0349 || Timer: 0.1428sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 200 || pre_apn_loss: 0.0228 || Timer: 0.1425sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 220 || pre_apn_loss: 0.0365 || Timer: 0.1557sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 240 || pre_apn_loss: 0.0366 || Timer: 0.1662sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 260 || pre_apn_loss: 0.0549 || Timer: 0.1436sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 280 || pre_apn_loss: 0.0437 || Timer: 0.1415sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 300 || pre_apn_loss: 0.0225 || Timer: 0.1435sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 320 || pre_apn_loss: 0.0182 || Timer: 0.1421sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 340 || pre_apn_loss: 0.0194 || Timer: 0.1426sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 360 || pre_apn_loss: 0.0340 || Timer: 0.1435sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 380 || pre_apn_loss: 0.0596 || Timer: 0.1431sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 400 || pre_apn_loss: 0.0319 || Timer: 0.1428sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 420 || pre_apn_loss: 0.0150 || Timer: 0.1422sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 440 || pre_apn_loss: 0.0270 || Timer: 0.1518sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 460 || pre_apn_loss: 0.0664 || Timer: 0.1436sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 480 || pre_apn_loss: 0.0395 || Timer: 0.1441sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 500 || pre_apn_loss: 0.0398 || Timer: 0.1426sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 520 || pre_apn_loss: 0.0292 || Timer: 0.1432sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 540 || pre_apn_loss: 0.0242 || Timer: 0.1430sec
+(375, 500, 3)
+ [*] pre_apn_epoch[0], || pre_apn_iter 560 || pre_apn_loss: 0.0362 || Timer: 0.1505sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 580 || pre_apn_loss: 0.0296 || Timer: 0.1419sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 600 || pre_apn_loss: 0.0155 || Timer: 0.1426sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 620 || pre_apn_loss: 0.0106 || Timer: 0.1421sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 640 || pre_apn_loss: 0.0414 || Timer: 0.1438sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 660 || pre_apn_loss: 0.0226 || Timer: 0.1434sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 680 || pre_apn_loss: 0.0454 || Timer: 0.1485sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 700 || pre_apn_loss: 0.0411 || Timer: 0.1424sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 720 || pre_apn_loss: 0.0224 || Timer: 0.1438sec
+(326, 500, 3)
+ [*] pre_apn_epoch[0], || pre_apn_iter 740 || pre_apn_loss: 0.0325 || Timer: 0.1424sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 760 || pre_apn_loss: 0.0225 || Timer: 0.1437sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 780 || pre_apn_loss: 0.0197 || Timer: 0.1641sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 800 || pre_apn_loss: 0.0150 || Timer: 0.1433sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 820 || pre_apn_loss: 0.0227 || Timer: 0.1443sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 840 || pre_apn_loss: 0.0216 || Timer: 0.1520sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 860 || pre_apn_loss: 0.0319 || Timer: 0.1490sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 880 || pre_apn_loss: 0.0264 || Timer: 0.1435sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 900 || pre_apn_loss: 0.0129 || Timer: 0.1621sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 920 || pre_apn_loss: 0.0176 || Timer: 0.1464sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 940 || pre_apn_loss: 0.0435 || Timer: 0.1451sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 960 || pre_apn_loss: 0.0211 || Timer: 0.1732sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 980 || pre_apn_loss: 0.0266 || Timer: 0.1698sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 1000 || pre_apn_loss: 0.0291 || Timer: 0.1449sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 1020 || pre_apn_loss: 0.0418 || Timer: 0.1459sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 1040 || pre_apn_loss: 0.0272 || Timer: 0.1443sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 1060 || pre_apn_loss: 0.0144 || Timer: 0.2105sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 1080 || pre_apn_loss: 0.0294 || Timer: 0.1435sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 1100 || pre_apn_loss: 0.0184 || Timer: 0.1436sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 1120 || pre_apn_loss: 0.0158 || Timer: 0.1433sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 1140 || pre_apn_loss: 0.0162 || Timer: 0.1437sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 1160 || pre_apn_loss: 0.0320 || Timer: 0.1442sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 1180 || pre_apn_loss: 0.0187 || Timer: 0.1419sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 1200 || pre_apn_loss: 0.0385 || Timer: 0.1434sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 1220 || pre_apn_loss: 0.0363 || Timer: 0.1437sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 1240 || pre_apn_loss: 0.0323 || Timer: 0.1437sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 1260 || pre_apn_loss: 0.0341 || Timer: 0.1427sec
+(500, 500, 3)
+ [*] pre_apn_epoch[0], || pre_apn_iter 1280 || pre_apn_loss: 0.0392 || Timer: 0.1436sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 1300 || pre_apn_loss: 0.0190 || Timer: 0.1437sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 1320 || pre_apn_loss: 0.0219 || Timer: 0.1439sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 1340 || pre_apn_loss: 0.0272 || Timer: 0.1442sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 1360 || pre_apn_loss: 0.0305 || Timer: 0.1438sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 1380 || pre_apn_loss: 0.0373 || Timer: 0.1433sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 1400 || pre_apn_loss: 0.0147 || Timer: 0.1441sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 1420 || pre_apn_loss: 0.0270 || Timer: 0.1441sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 1440 || pre_apn_loss: 0.0141 || Timer: 0.1443sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 1460 || pre_apn_loss: 0.0168 || Timer: 0.1770sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 1480 || pre_apn_loss: 0.0183 || Timer: 0.1637sec
+ [*] pre_apn_epoch[1], || pre_apn_iter 1500 || pre_apn_loss: 0.0133 || Timer: 0.2333sec
+ [*] pre_apn_epoch[1], || pre_apn_iter 1520 || pre_apn_loss: 0.0184 || Timer: 0.1442sec
+ [*] pre_apn_epoch[1], || pre_apn_iter 1540 || pre_apn_loss: 0.0265 || Timer: 0.1522sec
+ [*] pre_apn_epoch[1], || pre_apn_iter 1560 || pre_apn_loss: 0.0233 || Timer: 0.1682sec
+ [*] pre_apn_epoch[1], || pre_apn_iter 1580 || pre_apn_loss: 0.0083 || Timer: 0.1446sec
+ [*] pre_apn_epoch[1], || pre_apn_iter 1600 || pre_apn_loss: 0.0533 || Timer: 0.1474sec
+ [*] pre_apn_epoch[1], || pre_apn_iter 1620 || pre_apn_loss: 0.0284 || Timer: 0.1438sec
+ [*] pre_apn_epoch[1], || pre_apn_iter 1640 || pre_apn_loss: 0.0147 || Timer: 0.1434sec
+ [*] pre_apn_epoch[1], || pre_apn_iter 1660 || pre_apn_loss: 0.0286 || Timer: 0.1601sec
+ [*] pre_apn_epoch[1], || pre_apn_iter 1680 || pre_apn_loss: 0.0240 || Timer: 0.1436sec
+(326, 500, 3)
+ [*] pre_apn_epoch[1], || pre_apn_iter 1700 || pre_apn_loss: 0.0211 || Timer: 0.1426sec
+ [*] pre_apn_epoch[1], || pre_apn_iter 1720 || pre_apn_loss: 0.0235 || Timer: 0.1436sec
+ [*] pre_apn_epoch[1], || pre_apn_iter 1740 || pre_apn_loss: 0.0112 || Timer: 0.1428sec
+ [*] pre_apn_epoch[1], || pre_apn_iter 1760 || pre_apn_loss: 0.0332 || Timer: 0.1470sec
+ [*] pre_apn_epoch[1], || pre_apn_iter 1780 || pre_apn_loss: 0.0202 || Timer: 0.1438sec
+ [*] pre_apn_epoch[1], || pre_apn_iter 1800 || pre_apn_loss: 0.0094 || Timer: 0.1437sec
+ [*] pre_apn_epoch[1], || pre_apn_iter 1820 || pre_apn_loss: 0.0188 || Timer: 0.1422sec
+(281, 500, 3)
+ [*] pre_apn_epoch[1], || pre_apn_iter 1840 || pre_apn_loss: 0.0333 || Timer: 0.1460sec
+ [*] pre_apn_epoch[1], || pre_apn_iter 1860 || pre_apn_loss: 0.0326 || Timer: 0.1443sec
+ [*] pre_apn_epoch[1], || pre_apn_iter 1880 || pre_apn_loss: 0.0216 || Timer: 0.1441sec
+ [*] pre_apn_epoch[1], || pre_apn_iter 1900 || pre_apn_loss: 0.0457 || Timer: 0.1424sec
+ [*] pre_apn_epoch[1], || pre_apn_iter 1920 || pre_apn_loss: 0.0755 || Timer: 0.1443sec
+ [*] pre_apn_epoch[1], || pre_apn_iter 1940 || pre_apn_loss: 0.0340 || Timer: 0.1493sec
+ [*] pre_apn_epoch[1], || pre_apn_iter 1960 || pre_apn_loss: 0.0317 || Timer: 0.1429sec
+ [*] pre_apn_epoch[1], || pre_apn_iter 1980 || pre_apn_loss: 0.0452 || Timer: 0.1431sec
+ [*] Swtich optimize parameters to Class
+torch.cuda  is available
+Traceback (most recent call last):
+  File "/home/yy/FGVC/RACNN-pytorch-master/trainer.py", line 390, in <module>
+    train()
+  File "/home/yy/FGVC/RACNN-pytorch-master/trainer.py", line 171, in train
+    test(testloader, iteration) # 测试
+  File "/home/yy/FGVC/RACNN-pytorch-master/trainer.py", line 347, in test
+    test_cls_losses.append(sum(test_cls_losses))
+AttributeError: 'Tensor' object has no attribute 'append'

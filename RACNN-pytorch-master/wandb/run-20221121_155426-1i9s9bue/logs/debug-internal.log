@@ -1,0 +1,436 @@
+2022-11-21 15:54:26,875 INFO    StreamThr :60596 [internal.py:wandb_internal():88] W&B internal server running at pid: 60596, started at: 2022-11-21 15:54:26.874902
+2022-11-21 15:54:26,877 DEBUG   HandlerThread:60596 [handler.py:handle_request():139] handle_request: status
+2022-11-21 15:54:26,880 DEBUG   SenderThread:60596 [sender.py:send_request():317] send_request: status
+2022-11-21 15:54:26,883 INFO    WriterThread:60596 [datastore.py:open_for_write():75] open: /home/yy/FGVC/RACNN-pytorch-master/wandb/run-20221121_155426-1i9s9bue/run-1i9s9bue.wandb
+2022-11-21 15:54:26,883 DEBUG   SenderThread:60596 [sender.py:send():303] send: header
+2022-11-21 15:54:26,884 DEBUG   SenderThread:60596 [sender.py:send():303] send: run
+2022-11-21 15:54:27,767 DEBUG   HandlerThread:60596 [handler.py:handle_request():139] handle_request: check_version
+2022-11-21 15:54:27,772 INFO    SenderThread:60596 [dir_watcher.py:__init__():216] watching files in: /home/yy/FGVC/RACNN-pytorch-master/wandb/run-20221121_155426-1i9s9bue/files
+2022-11-21 15:54:27,772 INFO    SenderThread:60596 [sender.py:_start_run_threads():928] run started: 1i9s9bue with start time 1669017266.866204
+2022-11-21 15:54:27,772 DEBUG   SenderThread:60596 [sender.py:send():303] send: summary
+2022-11-21 15:54:27,772 INFO    SenderThread:60596 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 15:54:27,772 DEBUG   SenderThread:60596 [sender.py:send_request():317] send_request: check_version
+2022-11-21 15:54:28,238 DEBUG   HandlerThread:60596 [handler.py:handle_request():139] handle_request: run_start
+2022-11-21 15:54:28,251 DEBUG   HandlerThread:60596 [system_info.py:__init__():31] System info init
+2022-11-21 15:54:28,252 DEBUG   HandlerThread:60596 [system_info.py:__init__():46] System info init done
+2022-11-21 15:54:28,252 INFO    HandlerThread:60596 [system_monitor.py:start():150] Starting system monitor
+2022-11-21 15:54:28,252 INFO    SystemMonitor:60596 [system_monitor.py:_start():116] Starting system asset monitoring threads
+2022-11-21 15:54:28,252 INFO    HandlerThread:60596 [system_monitor.py:probe():168] Collecting system info
+2022-11-21 15:54:28,252 INFO    SystemMonitor:60596 [interfaces.py:start():168] Started cpu
+2022-11-21 15:54:28,253 INFO    SystemMonitor:60596 [interfaces.py:start():168] Started disk
+2022-11-21 15:54:28,254 INFO    SystemMonitor:60596 [interfaces.py:start():168] Started gpu
+2022-11-21 15:54:28,255 INFO    SystemMonitor:60596 [interfaces.py:start():168] Started memory
+2022-11-21 15:54:28,257 INFO    SystemMonitor:60596 [interfaces.py:start():168] Started network
+2022-11-21 15:54:28,307 DEBUG   HandlerThread:60596 [system_info.py:probe():195] Probing system
+2022-11-21 15:54:28,313 DEBUG   HandlerThread:60596 [system_info.py:_probe_git():180] Probing git
+2022-11-21 15:54:28,323 DEBUG   HandlerThread:60596 [system_info.py:_probe_git():188] Probing git done
+2022-11-21 15:54:28,323 DEBUG   HandlerThread:60596 [system_info.py:probe():241] Probing system done
+2022-11-21 15:54:28,323 DEBUG   HandlerThread:60596 [system_monitor.py:probe():177] {'os': 'Linux-5.4.0-131-generic-x86_64-with-glibc2.27', 'python': '3.9.13', 'heartbeatAt': '2022-11-21T07:54:28.307735', 'startedAt': '2022-11-21T07:54:26.852987', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '/home/yy/FGVC/RACNN-pytorch-master/trainer.py', 'codePath': 'RACNN-pytorch-master/trainer.py', 'git': {'remote': None, 'commit': None}, 'email': '1090050617@qq.com', 'root': '/home/yy/FGVC', 'host': 'inspur-NULL', 'username': 'yy', 'executable': '/home/yy/anaconda3/envs/pytorch_gpu/bin/python', 'cpu_count': 32, 'cpu_count_logical': 64, 'cpu_freq': {'current': 1553.29153125, 'min': 800.0, 'max': 3400.0}, 'cpu_freq_per_core': [{'current': 825.417, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 1255.77, 'min': 800.0, 'max': 3400.0}, {'current': 2900.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.135, 'min': 800.0, 'max': 3400.0}, {'current': 799.921, 'min': 800.0, 'max': 3400.0}, {'current': 932.631, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 1616.105, 'min': 800.0, 'max': 3400.0}, {'current': 1100.0, 'min': 800.0, 'max': 3400.0}, {'current': 2900.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 798.625, 'min': 800.0, 'max': 3400.0}, {'current': 1237.165, 'min': 800.0, 'max': 3400.0}, {'current': 801.47, 'min': 800.0, 'max': 3400.0}, {'current': 2899.997, 'min': 800.0, 'max': 3400.0}, {'current': 1870.449, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 2900.0, 'min': 800.0, 'max': 3400.0}, {'current': 2350.561, 'min': 800.0, 'max': 3400.0}, {'current': 2087.5, 'min': 800.0, 'max': 3400.0}, {'current': 2900.002, 'min': 800.0, 'max': 3400.0}, {'current': 1099.995, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 2891.594, 'min': 800.0, 'max': 3400.0}, {'current': 1900.0, 'min': 800.0, 'max': 3400.0}, {'current': 954.054, 'min': 800.0, 'max': 3400.0}, {'current': 2910.564, 'min': 800.0, 'max': 3400.0}, {'current': 1299.995, 'min': 800.0, 'max': 3400.0}, {'current': 946.432, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 817.458, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 1195.272, 'min': 800.0, 'max': 3400.0}, {'current': 2890.965, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 980.36, 'min': 800.0, 'max': 3400.0}, {'current': 798.458, 'min': 800.0, 'max': 3400.0}, {'current': 1125.524, 'min': 800.0, 'max': 3400.0}, {'current': 1100.0, 'min': 800.0, 'max': 3400.0}, {'current': 2899.997, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 799.883, 'min': 800.0, 'max': 3400.0}, {'current': 1101.213, 'min': 800.0, 'max': 3400.0}, {'current': 801.47, 'min': 800.0, 'max': 3400.0}, {'current': 2900.0, 'min': 800.0, 'max': 3400.0}, {'current': 1839.114, 'min': 800.0, 'max': 3400.0}, {'current': 798.717, 'min': 800.0, 'max': 3400.0}, {'current': 2891.158, 'min': 800.0, 'max': 3400.0}, {'current': 2679.298, 'min': 800.0, 'max': 3400.0}, {'current': 1914.484, 'min': 800.0, 'max': 3400.0}, {'current': 2904.208, 'min': 800.0, 'max': 3400.0}, {'current': 1100.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 2900.0, 'min': 800.0, 'max': 3400.0}, {'current': 1900.0, 'min': 800.0, 'max': 3400.0}, {'current': 900.943, 'min': 800.0, 'max': 3400.0}, {'current': 2900.0, 'min': 800.0, 'max': 3400.0}, {'current': 1299.994, 'min': 800.0, 'max': 3400.0}, {'current': 1150.432, 'min': 800.0, 'max': 3400.0}, {'current': 798.776, 'min': 800.0, 'max': 3400.0}], 'disk': {'total': 878.3903999328613, 'used': 815.3925971984863}, 'gpu': 'NVIDIA GeForce RTX 3090', 'gpu_count': 6, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 3090', 'memory_total': 25769803776}, {'name': 'NVIDIA GeForce RTX 3090', 'memory_total': 25769803776}, {'name': 'NVIDIA GeForce RTX 3090', 'memory_total': 25769803776}, {'name': 'NVIDIA GeForce RTX 3090', 'memory_total': 25769803776}, {'name': 'NVIDIA GeForce RTX 3090', 'memory_total': 25769803776}, {'name': 'NVIDIA GeForce RTX 3090', 'memory_total': 25769803776}], 'memory': {'total': 125.55618667602539}}
+2022-11-21 15:54:28,323 INFO    HandlerThread:60596 [system_monitor.py:probe():178] Finished collecting system info
+2022-11-21 15:54:28,323 INFO    HandlerThread:60596 [system_monitor.py:probe():181] Publishing system info
+2022-11-21 15:54:28,323 DEBUG   HandlerThread:60596 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2022-11-21 15:54:28,324 DEBUG   HandlerThread:60596 [system_info.py:_save_pip():67] Saving pip packages done
+2022-11-21 15:54:28,324 DEBUG   HandlerThread:60596 [system_info.py:_save_conda():74] Saving list of conda packages installed into the current environment
+2022-11-21 15:54:28,777 INFO    Thread-13 :60596 [dir_watcher.py:_on_file_created():275] file/dir created: /home/yy/FGVC/RACNN-pytorch-master/wandb/run-20221121_155426-1i9s9bue/files/conda-environment.yaml
+2022-11-21 15:54:28,778 INFO    Thread-13 :60596 [dir_watcher.py:_on_file_created():275] file/dir created: /home/yy/FGVC/RACNN-pytorch-master/wandb/run-20221121_155426-1i9s9bue/files/wandb-summary.json
+2022-11-21 15:54:28,778 INFO    Thread-13 :60596 [dir_watcher.py:_on_file_created():275] file/dir created: /home/yy/FGVC/RACNN-pytorch-master/wandb/run-20221121_155426-1i9s9bue/files/requirements.txt
+2022-11-21 15:54:31,315 DEBUG   HandlerThread:60596 [system_info.py:_save_conda():86] Saving conda packages done
+2022-11-21 15:54:31,318 INFO    HandlerThread:60596 [system_monitor.py:probe():183] Finished publishing system info
+2022-11-21 15:54:31,348 DEBUG   SenderThread:60596 [sender.py:send():303] send: files
+2022-11-21 15:54:31,349 INFO    SenderThread:60596 [sender.py:_save_file():1171] saving file wandb-metadata.json with policy now
+2022-11-21 15:54:31,359 DEBUG   HandlerThread:60596 [handler.py:handle_request():139] handle_request: stop_status
+2022-11-21 15:54:31,359 DEBUG   SenderThread:60596 [sender.py:send_request():317] send_request: stop_status
+2022-11-21 15:54:31,776 INFO    Thread-13 :60596 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/yy/FGVC/RACNN-pytorch-master/wandb/run-20221121_155426-1i9s9bue/files/conda-environment.yaml
+2022-11-21 15:54:31,776 INFO    Thread-13 :60596 [dir_watcher.py:_on_file_created():275] file/dir created: /home/yy/FGVC/RACNN-pytorch-master/wandb/run-20221121_155426-1i9s9bue/files/wandb-metadata.json
+2022-11-21 15:54:31,873 DEBUG   SenderThread:60596 [sender.py:send():303] send: telemetry
+2022-11-21 15:54:32,585 INFO    Thread-16 :60596 [upload_job.py:push():143] Uploaded file /tmp/tmp17py7lg3wandb/1uz8xyhc-wandb-metadata.json
+2022-11-21 15:54:37,778 INFO    Thread-13 :60596 [dir_watcher.py:_on_file_created():275] file/dir created: /home/yy/FGVC/RACNN-pytorch-master/wandb/run-20221121_155426-1i9s9bue/files/output.log
+2022-11-21 15:54:39,779 INFO    Thread-13 :60596 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/yy/FGVC/RACNN-pytorch-master/wandb/run-20221121_155426-1i9s9bue/files/output.log
+2022-11-21 15:54:46,927 DEBUG   HandlerThread:60596 [handler.py:handle_request():139] handle_request: stop_status
+2022-11-21 15:54:46,928 DEBUG   SenderThread:60596 [sender.py:send_request():317] send_request: stop_status
+2022-11-21 15:54:47,782 INFO    Thread-13 :60596 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/yy/FGVC/RACNN-pytorch-master/wandb/run-20221121_155426-1i9s9bue/files/output.log
+2022-11-21 15:54:52,120 DEBUG   HandlerThread:60596 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-21 15:54:52,123 DEBUG   SenderThread:60596 [sender.py:send():303] send: history
+2022-11-21 15:54:52,123 DEBUG   SenderThread:60596 [sender.py:send():303] send: summary
+2022-11-21 15:54:52,127 INFO    SenderThread:60596 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 15:54:52,232 DEBUG   HandlerThread:60596 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-21 15:54:52,233 DEBUG   SenderThread:60596 [sender.py:send():303] send: history
+2022-11-21 15:54:52,233 DEBUG   SenderThread:60596 [sender.py:send():303] send: summary
+2022-11-21 15:54:52,234 INFO    SenderThread:60596 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 15:54:52,424 DEBUG   HandlerThread:60596 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-21 15:54:52,425 DEBUG   SenderThread:60596 [sender.py:send():303] send: history
+2022-11-21 15:54:52,425 DEBUG   SenderThread:60596 [sender.py:send():303] send: summary
+2022-11-21 15:54:52,426 INFO    SenderThread:60596 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 15:54:52,632 DEBUG   HandlerThread:60596 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-21 15:54:52,633 DEBUG   SenderThread:60596 [sender.py:send():303] send: history
+2022-11-21 15:54:52,633 DEBUG   SenderThread:60596 [sender.py:send():303] send: summary
+2022-11-21 15:54:52,633 INFO    SenderThread:60596 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 15:54:52,783 INFO    Thread-13 :60596 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/yy/FGVC/RACNN-pytorch-master/wandb/run-20221121_155426-1i9s9bue/files/wandb-summary.json
+2022-11-21 15:54:52,788 DEBUG   HandlerThread:60596 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-21 15:54:52,788 DEBUG   SenderThread:60596 [sender.py:send():303] send: history
+2022-11-21 15:54:52,789 DEBUG   SenderThread:60596 [sender.py:send():303] send: summary
+2022-11-21 15:54:52,789 INFO    SenderThread:60596 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 15:54:52,943 DEBUG   HandlerThread:60596 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-21 15:54:52,944 DEBUG   SenderThread:60596 [sender.py:send():303] send: history
+2022-11-21 15:54:52,944 DEBUG   SenderThread:60596 [sender.py:send():303] send: summary
+2022-11-21 15:54:52,945 INFO    SenderThread:60596 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 15:54:53,161 DEBUG   HandlerThread:60596 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-21 15:54:53,161 DEBUG   SenderThread:60596 [sender.py:send():303] send: history
+2022-11-21 15:54:53,162 DEBUG   SenderThread:60596 [sender.py:send():303] send: summary
+2022-11-21 15:54:53,162 INFO    SenderThread:60596 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 15:54:53,407 DEBUG   HandlerThread:60596 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-21 15:54:53,407 DEBUG   SenderThread:60596 [sender.py:send():303] send: history
+2022-11-21 15:54:53,408 DEBUG   SenderThread:60596 [sender.py:send():303] send: summary
+2022-11-21 15:54:53,408 INFO    SenderThread:60596 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 15:54:53,562 DEBUG   HandlerThread:60596 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-21 15:54:53,563 DEBUG   SenderThread:60596 [sender.py:send():303] send: history
+2022-11-21 15:54:53,563 DEBUG   SenderThread:60596 [sender.py:send():303] send: summary
+2022-11-21 15:54:53,563 INFO    SenderThread:60596 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 15:54:53,718 DEBUG   HandlerThread:60596 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-21 15:54:53,718 DEBUG   SenderThread:60596 [sender.py:send():303] send: history
+2022-11-21 15:54:53,719 DEBUG   SenderThread:60596 [sender.py:send():303] send: summary
+2022-11-21 15:54:53,719 INFO    SenderThread:60596 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 15:54:53,783 INFO    Thread-13 :60596 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/yy/FGVC/RACNN-pytorch-master/wandb/run-20221121_155426-1i9s9bue/files/output.log
+2022-11-21 15:54:53,784 INFO    Thread-13 :60596 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/yy/FGVC/RACNN-pytorch-master/wandb/run-20221121_155426-1i9s9bue/files/wandb-summary.json
+2022-11-21 15:54:53,897 DEBUG   HandlerThread:60596 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-21 15:54:53,898 DEBUG   SenderThread:60596 [sender.py:send():303] send: history
+2022-11-21 15:54:53,898 DEBUG   SenderThread:60596 [sender.py:send():303] send: summary
+2022-11-21 15:54:53,899 INFO    SenderThread:60596 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 15:54:54,056 DEBUG   HandlerThread:60596 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-21 15:54:54,057 DEBUG   SenderThread:60596 [sender.py:send():303] send: history
+2022-11-21 15:54:54,057 DEBUG   SenderThread:60596 [sender.py:send():303] send: summary
+2022-11-21 15:54:54,057 INFO    SenderThread:60596 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 15:54:54,243 DEBUG   HandlerThread:60596 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-21 15:54:54,244 DEBUG   SenderThread:60596 [sender.py:send():303] send: history
+2022-11-21 15:54:54,244 DEBUG   SenderThread:60596 [sender.py:send():303] send: summary
+2022-11-21 15:54:54,245 INFO    SenderThread:60596 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 15:54:54,479 DEBUG   HandlerThread:60596 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-21 15:54:54,480 DEBUG   SenderThread:60596 [sender.py:send():303] send: history
+2022-11-21 15:54:54,480 DEBUG   SenderThread:60596 [sender.py:send():303] send: summary
+2022-11-21 15:54:54,481 INFO    SenderThread:60596 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 15:54:54,633 DEBUG   HandlerThread:60596 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-21 15:54:54,634 DEBUG   SenderThread:60596 [sender.py:send():303] send: history
+2022-11-21 15:54:54,634 DEBUG   SenderThread:60596 [sender.py:send():303] send: summary
+2022-11-21 15:54:54,634 INFO    SenderThread:60596 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 15:54:54,784 INFO    Thread-13 :60596 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/yy/FGVC/RACNN-pytorch-master/wandb/run-20221121_155426-1i9s9bue/files/wandb-summary.json
+2022-11-21 15:54:54,789 DEBUG   HandlerThread:60596 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-21 15:54:54,790 DEBUG   SenderThread:60596 [sender.py:send():303] send: history
+2022-11-21 15:54:54,790 DEBUG   SenderThread:60596 [sender.py:send():303] send: summary
+2022-11-21 15:54:54,791 INFO    SenderThread:60596 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 15:54:54,947 DEBUG   HandlerThread:60596 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-21 15:54:54,947 DEBUG   SenderThread:60596 [sender.py:send():303] send: history
+2022-11-21 15:54:54,947 DEBUG   SenderThread:60596 [sender.py:send():303] send: summary
+2022-11-21 15:54:54,948 INFO    SenderThread:60596 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 15:54:55,106 DEBUG   HandlerThread:60596 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-21 15:54:55,107 DEBUG   SenderThread:60596 [sender.py:send():303] send: history
+2022-11-21 15:54:55,107 DEBUG   SenderThread:60596 [sender.py:send():303] send: summary
+2022-11-21 15:54:55,107 INFO    SenderThread:60596 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 15:54:55,263 DEBUG   HandlerThread:60596 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-21 15:54:55,264 DEBUG   SenderThread:60596 [sender.py:send():303] send: history
+2022-11-21 15:54:55,264 DEBUG   SenderThread:60596 [sender.py:send():303] send: summary
+2022-11-21 15:54:55,264 INFO    SenderThread:60596 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 15:54:55,419 DEBUG   HandlerThread:60596 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-21 15:54:55,420 DEBUG   SenderThread:60596 [sender.py:send():303] send: history
+2022-11-21 15:54:55,420 DEBUG   SenderThread:60596 [sender.py:send():303] send: summary
+2022-11-21 15:54:55,420 INFO    SenderThread:60596 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 15:54:55,651 DEBUG   HandlerThread:60596 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-21 15:54:55,652 DEBUG   SenderThread:60596 [sender.py:send():303] send: history
+2022-11-21 15:54:55,652 DEBUG   SenderThread:60596 [sender.py:send():303] send: summary
+2022-11-21 15:54:55,652 INFO    SenderThread:60596 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 15:54:55,784 INFO    Thread-13 :60596 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/yy/FGVC/RACNN-pytorch-master/wandb/run-20221121_155426-1i9s9bue/files/output.log
+2022-11-21 15:54:55,784 INFO    Thread-13 :60596 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/yy/FGVC/RACNN-pytorch-master/wandb/run-20221121_155426-1i9s9bue/files/wandb-summary.json
+2022-11-21 15:54:55,812 DEBUG   HandlerThread:60596 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-21 15:54:55,813 DEBUG   SenderThread:60596 [sender.py:send():303] send: history
+2022-11-21 15:54:55,813 DEBUG   SenderThread:60596 [sender.py:send():303] send: summary
+2022-11-21 15:54:55,813 INFO    SenderThread:60596 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 15:54:55,968 DEBUG   HandlerThread:60596 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-21 15:54:55,969 DEBUG   SenderThread:60596 [sender.py:send():303] send: history
+2022-11-21 15:54:55,969 DEBUG   SenderThread:60596 [sender.py:send():303] send: summary
+2022-11-21 15:54:55,969 INFO    SenderThread:60596 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 15:54:56,217 DEBUG   HandlerThread:60596 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-21 15:54:56,218 DEBUG   SenderThread:60596 [sender.py:send():303] send: history
+2022-11-21 15:54:56,218 DEBUG   SenderThread:60596 [sender.py:send():303] send: summary
+2022-11-21 15:54:56,219 INFO    SenderThread:60596 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 15:54:56,415 DEBUG   HandlerThread:60596 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-21 15:54:56,416 DEBUG   SenderThread:60596 [sender.py:send():303] send: history
+2022-11-21 15:54:56,416 DEBUG   SenderThread:60596 [sender.py:send():303] send: summary
+2022-11-21 15:54:56,418 INFO    SenderThread:60596 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 15:54:56,571 DEBUG   HandlerThread:60596 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-21 15:54:56,572 DEBUG   SenderThread:60596 [sender.py:send():303] send: history
+2022-11-21 15:54:56,572 DEBUG   SenderThread:60596 [sender.py:send():303] send: summary
+2022-11-21 15:54:56,573 INFO    SenderThread:60596 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 15:54:56,728 DEBUG   HandlerThread:60596 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-21 15:54:56,729 DEBUG   SenderThread:60596 [sender.py:send():303] send: history
+2022-11-21 15:54:56,729 DEBUG   SenderThread:60596 [sender.py:send():303] send: summary
+2022-11-21 15:54:56,729 INFO    SenderThread:60596 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 15:54:56,784 INFO    Thread-13 :60596 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/yy/FGVC/RACNN-pytorch-master/wandb/run-20221121_155426-1i9s9bue/files/wandb-summary.json
+2022-11-21 15:54:56,887 DEBUG   HandlerThread:60596 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-21 15:54:56,888 DEBUG   SenderThread:60596 [sender.py:send():303] send: history
+2022-11-21 15:54:57,042 DEBUG   HandlerThread:60596 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-21 15:54:57,269 DEBUG   HandlerThread:60596 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-21 15:54:57,389 DEBUG   SenderThread:60596 [sender.py:send():303] send: summary
+2022-11-21 15:54:57,389 INFO    SenderThread:60596 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 15:54:57,390 DEBUG   SenderThread:60596 [sender.py:send():303] send: history
+2022-11-21 15:54:57,390 DEBUG   SenderThread:60596 [sender.py:send():303] send: summary
+2022-11-21 15:54:57,390 INFO    SenderThread:60596 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 15:54:57,390 DEBUG   SenderThread:60596 [sender.py:send():303] send: history
+2022-11-21 15:54:57,390 DEBUG   SenderThread:60596 [sender.py:send():303] send: summary
+2022-11-21 15:54:57,390 INFO    SenderThread:60596 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 15:54:57,429 DEBUG   HandlerThread:60596 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-21 15:54:57,429 DEBUG   SenderThread:60596 [sender.py:send():303] send: history
+2022-11-21 15:54:57,429 DEBUG   SenderThread:60596 [sender.py:send():303] send: summary
+2022-11-21 15:54:57,430 INFO    SenderThread:60596 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 15:54:57,613 DEBUG   HandlerThread:60596 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-21 15:54:57,614 DEBUG   SenderThread:60596 [sender.py:send():303] send: history
+2022-11-21 15:54:57,614 DEBUG   SenderThread:60596 [sender.py:send():303] send: summary
+2022-11-21 15:54:57,614 INFO    SenderThread:60596 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 15:54:57,776 DEBUG   HandlerThread:60596 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-21 15:54:57,777 DEBUG   SenderThread:60596 [sender.py:send():303] send: history
+2022-11-21 15:54:57,777 DEBUG   SenderThread:60596 [sender.py:send():303] send: summary
+2022-11-21 15:54:57,778 INFO    SenderThread:60596 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 15:54:57,785 INFO    Thread-13 :60596 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/yy/FGVC/RACNN-pytorch-master/wandb/run-20221121_155426-1i9s9bue/files/output.log
+2022-11-21 15:54:57,785 INFO    Thread-13 :60596 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/yy/FGVC/RACNN-pytorch-master/wandb/run-20221121_155426-1i9s9bue/files/wandb-summary.json
+2022-11-21 15:54:57,785 INFO    Thread-13 :60596 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/yy/FGVC/RACNN-pytorch-master/wandb/run-20221121_155426-1i9s9bue/files/config.yaml
+2022-11-21 15:54:57,946 DEBUG   HandlerThread:60596 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-21 15:54:57,947 DEBUG   SenderThread:60596 [sender.py:send():303] send: history
+2022-11-21 15:54:57,947 DEBUG   SenderThread:60596 [sender.py:send():303] send: summary
+2022-11-21 15:54:57,948 INFO    SenderThread:60596 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 15:54:58,166 DEBUG   HandlerThread:60596 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-21 15:54:58,167 DEBUG   SenderThread:60596 [sender.py:send():303] send: history
+2022-11-21 15:54:58,168 DEBUG   SenderThread:60596 [sender.py:send():303] send: summary
+2022-11-21 15:54:58,168 INFO    SenderThread:60596 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 15:54:58,323 DEBUG   HandlerThread:60596 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-21 15:54:58,323 DEBUG   SenderThread:60596 [sender.py:send():303] send: history
+2022-11-21 15:54:58,324 DEBUG   SenderThread:60596 [sender.py:send():303] send: summary
+2022-11-21 15:54:58,324 INFO    SenderThread:60596 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 15:54:58,490 DEBUG   HandlerThread:60596 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-21 15:54:58,491 DEBUG   SenderThread:60596 [sender.py:send():303] send: history
+2022-11-21 15:54:58,491 DEBUG   SenderThread:60596 [sender.py:send():303] send: summary
+2022-11-21 15:54:58,493 INFO    SenderThread:60596 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 15:54:58,654 DEBUG   HandlerThread:60596 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-21 15:54:58,655 DEBUG   SenderThread:60596 [sender.py:send():303] send: history
+2022-11-21 15:54:58,655 DEBUG   SenderThread:60596 [sender.py:send():303] send: summary
+2022-11-21 15:54:58,655 INFO    SenderThread:60596 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 15:54:58,785 INFO    Thread-13 :60596 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/yy/FGVC/RACNN-pytorch-master/wandb/run-20221121_155426-1i9s9bue/files/wandb-summary.json
+2022-11-21 15:54:58,831 DEBUG   HandlerThread:60596 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-21 15:54:58,831 DEBUG   SenderThread:60596 [sender.py:send():303] send: history
+2022-11-21 15:54:58,831 DEBUG   SenderThread:60596 [sender.py:send():303] send: summary
+2022-11-21 15:54:58,832 INFO    SenderThread:60596 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 15:54:59,038 DEBUG   HandlerThread:60596 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-21 15:54:59,038 DEBUG   SenderThread:60596 [sender.py:send():303] send: history
+2022-11-21 15:54:59,039 DEBUG   SenderThread:60596 [sender.py:send():303] send: summary
+2022-11-21 15:54:59,039 INFO    SenderThread:60596 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 15:54:59,197 DEBUG   HandlerThread:60596 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-21 15:54:59,198 DEBUG   SenderThread:60596 [sender.py:send():303] send: history
+2022-11-21 15:54:59,198 DEBUG   SenderThread:60596 [sender.py:send():303] send: summary
+2022-11-21 15:54:59,198 INFO    SenderThread:60596 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 15:54:59,353 DEBUG   HandlerThread:60596 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-21 15:54:59,354 DEBUG   SenderThread:60596 [sender.py:send():303] send: history
+2022-11-21 15:54:59,355 DEBUG   SenderThread:60596 [sender.py:send():303] send: summary
+2022-11-21 15:54:59,355 INFO    SenderThread:60596 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 15:54:59,536 DEBUG   HandlerThread:60596 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-21 15:54:59,536 DEBUG   SenderThread:60596 [sender.py:send():303] send: history
+2022-11-21 15:54:59,537 DEBUG   SenderThread:60596 [sender.py:send():303] send: summary
+2022-11-21 15:54:59,537 INFO    SenderThread:60596 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 15:54:59,705 DEBUG   HandlerThread:60596 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-21 15:54:59,705 DEBUG   SenderThread:60596 [sender.py:send():303] send: history
+2022-11-21 15:54:59,705 DEBUG   SenderThread:60596 [sender.py:send():303] send: summary
+2022-11-21 15:54:59,706 INFO    SenderThread:60596 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 15:54:59,785 INFO    Thread-13 :60596 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/yy/FGVC/RACNN-pytorch-master/wandb/run-20221121_155426-1i9s9bue/files/wandb-summary.json
+2022-11-21 15:54:59,861 DEBUG   HandlerThread:60596 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-21 15:54:59,862 DEBUG   SenderThread:60596 [sender.py:send():303] send: history
+2022-11-21 15:54:59,862 DEBUG   SenderThread:60596 [sender.py:send():303] send: summary
+2022-11-21 15:54:59,862 INFO    SenderThread:60596 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 15:55:00,025 DEBUG   HandlerThread:60596 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-21 15:55:00,026 DEBUG   SenderThread:60596 [sender.py:send():303] send: history
+2022-11-21 15:55:00,026 DEBUG   SenderThread:60596 [sender.py:send():303] send: summary
+2022-11-21 15:55:00,026 INFO    SenderThread:60596 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 15:55:00,182 DEBUG   HandlerThread:60596 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-21 15:55:00,183 DEBUG   SenderThread:60596 [sender.py:send():303] send: history
+2022-11-21 15:55:00,184 DEBUG   SenderThread:60596 [sender.py:send():303] send: summary
+2022-11-21 15:55:00,184 INFO    SenderThread:60596 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 15:55:00,341 DEBUG   HandlerThread:60596 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-21 15:55:00,342 DEBUG   SenderThread:60596 [sender.py:send():303] send: history
+2022-11-21 15:55:00,342 DEBUG   SenderThread:60596 [sender.py:send():303] send: summary
+2022-11-21 15:55:00,343 INFO    SenderThread:60596 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 15:55:00,500 DEBUG   HandlerThread:60596 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-21 15:55:00,501 DEBUG   SenderThread:60596 [sender.py:send():303] send: history
+2022-11-21 15:55:00,501 DEBUG   SenderThread:60596 [sender.py:send():303] send: summary
+2022-11-21 15:55:00,502 INFO    SenderThread:60596 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 15:55:00,732 DEBUG   HandlerThread:60596 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-21 15:55:00,733 DEBUG   SenderThread:60596 [sender.py:send():303] send: history
+2022-11-21 15:55:00,733 DEBUG   SenderThread:60596 [sender.py:send():303] send: summary
+2022-11-21 15:55:00,734 INFO    SenderThread:60596 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 15:55:00,786 INFO    Thread-13 :60596 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/yy/FGVC/RACNN-pytorch-master/wandb/run-20221121_155426-1i9s9bue/files/wandb-summary.json
+2022-11-21 15:55:00,892 DEBUG   HandlerThread:60596 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-21 15:55:00,893 DEBUG   SenderThread:60596 [sender.py:send():303] send: history
+2022-11-21 15:55:00,893 DEBUG   SenderThread:60596 [sender.py:send():303] send: summary
+2022-11-21 15:55:00,893 INFO    SenderThread:60596 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 15:55:01,048 DEBUG   HandlerThread:60596 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-21 15:55:01,049 DEBUG   SenderThread:60596 [sender.py:send():303] send: history
+2022-11-21 15:55:01,049 DEBUG   SenderThread:60596 [sender.py:send():303] send: summary
+2022-11-21 15:55:01,049 INFO    SenderThread:60596 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 15:55:01,210 DEBUG   HandlerThread:60596 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-21 15:55:01,211 DEBUG   SenderThread:60596 [sender.py:send():303] send: history
+2022-11-21 15:55:01,211 DEBUG   SenderThread:60596 [sender.py:send():303] send: summary
+2022-11-21 15:55:01,211 INFO    SenderThread:60596 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 15:55:01,377 DEBUG   HandlerThread:60596 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-21 15:55:01,378 DEBUG   SenderThread:60596 [sender.py:send():303] send: history
+2022-11-21 15:55:01,378 DEBUG   SenderThread:60596 [sender.py:send():303] send: summary
+2022-11-21 15:55:01,379 INFO    SenderThread:60596 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 15:55:01,590 DEBUG   HandlerThread:60596 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-21 15:55:01,591 DEBUG   SenderThread:60596 [sender.py:send():303] send: history
+2022-11-21 15:55:01,591 DEBUG   SenderThread:60596 [sender.py:send():303] send: summary
+2022-11-21 15:55:01,592 INFO    SenderThread:60596 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 15:55:01,786 INFO    Thread-13 :60596 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/yy/FGVC/RACNN-pytorch-master/wandb/run-20221121_155426-1i9s9bue/files/output.log
+2022-11-21 15:55:01,786 INFO    Thread-13 :60596 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/yy/FGVC/RACNN-pytorch-master/wandb/run-20221121_155426-1i9s9bue/files/wandb-summary.json
+2022-11-21 15:55:01,792 DEBUG   HandlerThread:60596 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-21 15:55:01,793 DEBUG   SenderThread:60596 [sender.py:send():303] send: history
+2022-11-21 15:55:01,793 DEBUG   SenderThread:60596 [sender.py:send():303] send: summary
+2022-11-21 15:55:01,793 INFO    SenderThread:60596 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 15:55:01,982 DEBUG   HandlerThread:60596 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-21 15:55:01,983 DEBUG   SenderThread:60596 [sender.py:send():303] send: history
+2022-11-21 15:55:01,984 DEBUG   SenderThread:60596 [sender.py:send():303] send: summary
+2022-11-21 15:55:01,984 INFO    SenderThread:60596 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 15:55:02,168 DEBUG   HandlerThread:60596 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-21 15:55:02,169 DEBUG   SenderThread:60596 [sender.py:send():303] send: history
+2022-11-21 15:55:02,169 DEBUG   SenderThread:60596 [sender.py:send():303] send: summary
+2022-11-21 15:55:02,169 INFO    SenderThread:60596 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 15:55:02,427 DEBUG   HandlerThread:60596 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-21 15:55:02,428 DEBUG   SenderThread:60596 [sender.py:send():303] send: history
+2022-11-21 15:55:02,429 DEBUG   SenderThread:60596 [sender.py:send():303] send: summary
+2022-11-21 15:55:02,429 INFO    SenderThread:60596 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 15:55:02,585 DEBUG   HandlerThread:60596 [handler.py:handle_request():139] handle_request: stop_status
+2022-11-21 15:55:02,586 DEBUG   SenderThread:60596 [sender.py:send_request():317] send_request: stop_status
+2022-11-21 15:55:02,588 DEBUG   HandlerThread:60596 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-21 15:55:02,751 DEBUG   HandlerThread:60596 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-21 15:55:02,787 INFO    Thread-13 :60596 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/yy/FGVC/RACNN-pytorch-master/wandb/run-20221121_155426-1i9s9bue/files/wandb-summary.json
+2022-11-21 15:55:02,908 DEBUG   HandlerThread:60596 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-21 15:55:02,931 DEBUG   SenderThread:60596 [sender.py:send():303] send: history
+2022-11-21 15:55:02,931 DEBUG   SenderThread:60596 [sender.py:send():303] send: summary
+2022-11-21 15:55:02,933 INFO    SenderThread:60596 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 15:55:02,934 DEBUG   SenderThread:60596 [sender.py:send():303] send: history
+2022-11-21 15:55:02,934 DEBUG   SenderThread:60596 [sender.py:send():303] send: summary
+2022-11-21 15:55:02,934 INFO    SenderThread:60596 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 15:55:02,934 DEBUG   SenderThread:60596 [sender.py:send():303] send: history
+2022-11-21 15:55:02,935 DEBUG   SenderThread:60596 [sender.py:send():303] send: summary
+2022-11-21 15:55:02,935 INFO    SenderThread:60596 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 15:55:03,079 DEBUG   HandlerThread:60596 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-21 15:55:03,080 DEBUG   SenderThread:60596 [sender.py:send():303] send: history
+2022-11-21 15:55:03,080 DEBUG   SenderThread:60596 [sender.py:send():303] send: summary
+2022-11-21 15:55:03,081 INFO    SenderThread:60596 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 15:55:03,260 DEBUG   HandlerThread:60596 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-21 15:55:03,260 DEBUG   SenderThread:60596 [sender.py:send():303] send: history
+2022-11-21 15:55:03,261 DEBUG   SenderThread:60596 [sender.py:send():303] send: summary
+2022-11-21 15:55:03,261 INFO    SenderThread:60596 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 15:55:03,428 DEBUG   HandlerThread:60596 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-21 15:55:03,429 DEBUG   SenderThread:60596 [sender.py:send():303] send: history
+2022-11-21 15:55:03,429 DEBUG   SenderThread:60596 [sender.py:send():303] send: summary
+2022-11-21 15:55:03,429 INFO    SenderThread:60596 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 15:55:03,584 DEBUG   HandlerThread:60596 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-21 15:55:03,584 DEBUG   SenderThread:60596 [sender.py:send():303] send: history
+2022-11-21 15:55:03,585 DEBUG   SenderThread:60596 [sender.py:send():303] send: summary
+2022-11-21 15:55:03,585 INFO    SenderThread:60596 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 15:55:03,742 DEBUG   HandlerThread:60596 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-21 15:55:03,743 DEBUG   SenderThread:60596 [sender.py:send():303] send: history
+2022-11-21 15:55:03,743 DEBUG   SenderThread:60596 [sender.py:send():303] send: summary
+2022-11-21 15:55:03,744 INFO    SenderThread:60596 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 15:55:03,787 INFO    Thread-13 :60596 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/yy/FGVC/RACNN-pytorch-master/wandb/run-20221121_155426-1i9s9bue/files/output.log
+2022-11-21 15:55:03,787 INFO    Thread-13 :60596 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/yy/FGVC/RACNN-pytorch-master/wandb/run-20221121_155426-1i9s9bue/files/wandb-summary.json
+2022-11-21 15:55:03,898 DEBUG   HandlerThread:60596 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-21 15:55:03,899 DEBUG   SenderThread:60596 [sender.py:send():303] send: history
+2022-11-21 15:55:03,900 DEBUG   SenderThread:60596 [sender.py:send():303] send: summary
+2022-11-21 15:55:03,900 INFO    SenderThread:60596 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 15:55:04,063 DEBUG   SenderThread:60596 [sender.py:send():303] send: exit
+2022-11-21 15:55:04,063 INFO    SenderThread:60596 [sender.py:send_exit():442] handling exit code: 255
+2022-11-21 15:55:04,063 INFO    SenderThread:60596 [sender.py:send_exit():444] handling runtime: 35
+2022-11-21 15:55:04,064 INFO    SenderThread:60596 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 15:55:04,064 INFO    SenderThread:60596 [sender.py:send_exit():450] send defer
+2022-11-21 15:55:04,069 DEBUG   HandlerThread:60596 [handler.py:handle_request():139] handle_request: defer
+2022-11-21 15:55:04,069 INFO    HandlerThread:60596 [handler.py:handle_request_defer():162] handle defer: 0
+2022-11-21 15:55:04,069 DEBUG   SenderThread:60596 [sender.py:send_request():317] send_request: defer
+2022-11-21 15:55:04,069 INFO    SenderThread:60596 [sender.py:send_request_defer():459] handle sender defer: 0
+2022-11-21 15:55:04,069 INFO    SenderThread:60596 [sender.py:transition_state():463] send defer: 1
+2022-11-21 15:55:04,075 DEBUG   HandlerThread:60596 [handler.py:handle_request():139] handle_request: defer
+2022-11-21 15:55:04,075 INFO    HandlerThread:60596 [handler.py:handle_request_defer():162] handle defer: 1
+2022-11-21 15:55:04,075 INFO    HandlerThread:60596 [system_monitor.py:finish():160] Stopping system monitor
+2022-11-21 15:55:04,077 DEBUG   SystemMonitor:60596 [system_monitor.py:_start():130] Starting system metrics aggregation loop
+2022-11-21 15:55:04,077 DEBUG   SystemMonitor:60596 [system_monitor.py:_start():137] Finished system metrics aggregation loop
+2022-11-21 15:55:04,077 DEBUG   SystemMonitor:60596 [system_monitor.py:_start():141] Publishing last batch of metrics
+2022-11-21 15:55:04,087 INFO    HandlerThread:60596 [interfaces.py:finish():173] Joined cpu
+2022-11-21 15:55:04,087 INFO    HandlerThread:60596 [interfaces.py:finish():173] Joined disk
+2022-11-21 15:55:04,553 INFO    HandlerThread:60596 [interfaces.py:finish():173] Joined gpu
+2022-11-21 15:55:04,554 INFO    HandlerThread:60596 [interfaces.py:finish():173] Joined memory
+2022-11-21 15:55:04,554 INFO    HandlerThread:60596 [interfaces.py:finish():173] Joined network
+2022-11-21 15:55:04,557 DEBUG   SenderThread:60596 [sender.py:send_request():317] send_request: defer
+2022-11-21 15:55:04,559 INFO    SenderThread:60596 [sender.py:send_request_defer():459] handle sender defer: 1
+2022-11-21 15:55:04,559 INFO    SenderThread:60596 [sender.py:transition_state():463] send defer: 2
+2022-11-21 15:55:04,564 DEBUG   SenderThread:60596 [sender.py:send():303] send: stats
+2022-11-21 15:55:04,567 DEBUG   HandlerThread:60596 [handler.py:handle_request():139] handle_request: defer
+2022-11-21 15:55:04,568 INFO    HandlerThread:60596 [handler.py:handle_request_defer():162] handle defer: 2
+2022-11-21 15:55:04,568 DEBUG   SenderThread:60596 [sender.py:send_request():317] send_request: defer
+2022-11-21 15:55:04,568 INFO    SenderThread:60596 [sender.py:send_request_defer():459] handle sender defer: 2
+2022-11-21 15:55:04,568 INFO    SenderThread:60596 [sender.py:transition_state():463] send defer: 3
+2022-11-21 15:55:04,568 DEBUG   HandlerThread:60596 [handler.py:handle_request():139] handle_request: defer
+2022-11-21 15:55:04,569 INFO    HandlerThread:60596 [handler.py:handle_request_defer():162] handle defer: 3
+2022-11-21 15:55:04,569 DEBUG   SenderThread:60596 [sender.py:send_request():317] send_request: defer
+2022-11-21 15:55:04,569 INFO    SenderThread:60596 [sender.py:send_request_defer():459] handle sender defer: 3
+2022-11-21 15:55:04,569 INFO    SenderThread:60596 [sender.py:transition_state():463] send defer: 4
+2022-11-21 15:55:04,569 DEBUG   HandlerThread:60596 [handler.py:handle_request():139] handle_request: defer
+2022-11-21 15:55:04,569 INFO    HandlerThread:60596 [handler.py:handle_request_defer():162] handle defer: 4
+2022-11-21 15:55:04,570 DEBUG   SenderThread:60596 [sender.py:send():303] send: summary
+2022-11-21 15:55:04,571 INFO    SenderThread:60596 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 15:55:04,571 DEBUG   SenderThread:60596 [sender.py:send_request():317] send_request: defer
+2022-11-21 15:55:04,571 INFO    SenderThread:60596 [sender.py:send_request_defer():459] handle sender defer: 4
+2022-11-21 15:55:04,571 INFO    SenderThread:60596 [sender.py:transition_state():463] send defer: 5
+2022-11-21 15:55:04,572 DEBUG   HandlerThread:60596 [handler.py:handle_request():139] handle_request: defer
+2022-11-21 15:55:04,572 INFO    HandlerThread:60596 [handler.py:handle_request_defer():162] handle defer: 5
+2022-11-21 15:55:04,572 DEBUG   SenderThread:60596 [sender.py:send_request():317] send_request: defer
+2022-11-21 15:55:04,572 INFO    SenderThread:60596 [sender.py:send_request_defer():459] handle sender defer: 5
+2022-11-21 15:55:04,572 INFO    SenderThread:60596 [sender.py:transition_state():463] send defer: 6
+2022-11-21 15:55:04,572 DEBUG   HandlerThread:60596 [handler.py:handle_request():139] handle_request: defer
+2022-11-21 15:55:04,572 INFO    HandlerThread:60596 [handler.py:handle_request_defer():162] handle defer: 6
+2022-11-21 15:55:04,573 DEBUG   SenderThread:60596 [sender.py:send_request():317] send_request: defer
+2022-11-21 15:55:04,573 INFO    SenderThread:60596 [sender.py:send_request_defer():459] handle sender defer: 6
+2022-11-21 15:55:04,787 INFO    Thread-13 :60596 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/yy/FGVC/RACNN-pytorch-master/wandb/run-20221121_155426-1i9s9bue/files/wandb-summary.json
+2022-11-21 15:55:05,064 DEBUG   HandlerThread:60596 [handler.py:handle_request():139] handle_request: poll_exit
+2022-11-21 15:55:06,069 INFO    SenderThread:60596 [sender.py:transition_state():463] send defer: 7
+2022-11-21 15:55:06,070 DEBUG   SenderThread:60596 [sender.py:send_request():317] send_request: poll_exit
+2022-11-21 15:55:06,072 DEBUG   HandlerThread:60596 [handler.py:handle_request():139] handle_request: defer
+2022-11-21 15:55:06,072 INFO    HandlerThread:60596 [handler.py:handle_request_defer():162] handle defer: 7
+2022-11-21 15:55:06,072 DEBUG   SenderThread:60596 [sender.py:send_request():317] send_request: defer
+2022-11-21 15:55:06,073 INFO    SenderThread:60596 [sender.py:send_request_defer():459] handle sender defer: 7
+2022-11-21 15:55:06,073 INFO    SenderThread:60596 [dir_watcher.py:finish():362] shutting down directory watcher
+2022-11-21 15:55:06,789 INFO    SenderThread:60596 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/yy/FGVC/RACNN-pytorch-master/wandb/run-20221121_155426-1i9s9bue/files/output.log
+2022-11-21 15:55:06,789 INFO    SenderThread:60596 [dir_watcher.py:finish():392] scan: /home/yy/FGVC/RACNN-pytorch-master/wandb/run-20221121_155426-1i9s9bue/files
+2022-11-21 15:55:06,790 INFO    SenderThread:60596 [dir_watcher.py:finish():406] scan save: /home/yy/FGVC/RACNN-pytorch-master/wandb/run-20221121_155426-1i9s9bue/files/output.log output.log
+2022-11-21 15:55:06,790 INFO    SenderThread:60596 [dir_watcher.py:finish():406] scan save: /home/yy/FGVC/RACNN-pytorch-master/wandb/run-20221121_155426-1i9s9bue/files/requirements.txt requirements.txt
+2022-11-21 15:55:06,790 INFO    SenderThread:60596 [dir_watcher.py:finish():406] scan save: /home/yy/FGVC/RACNN-pytorch-master/wandb/run-20221121_155426-1i9s9bue/files/wandb-metadata.json wandb-metadata.json
+2022-11-21 15:55:06,791 INFO    SenderThread:60596 [dir_watcher.py:finish():406] scan save: /home/yy/FGVC/RACNN-pytorch-master/wandb/run-20221121_155426-1i9s9bue/files/config.yaml config.yaml
+2022-11-21 15:55:06,791 INFO    SenderThread:60596 [dir_watcher.py:finish():406] scan save: /home/yy/FGVC/RACNN-pytorch-master/wandb/run-20221121_155426-1i9s9bue/files/conda-environment.yaml conda-environment.yaml
+2022-11-21 15:55:06,798 INFO    SenderThread:60596 [dir_watcher.py:finish():406] scan save: /home/yy/FGVC/RACNN-pytorch-master/wandb/run-20221121_155426-1i9s9bue/files/wandb-summary.json wandb-summary.json
+2022-11-21 15:55:06,798 INFO    SenderThread:60596 [sender.py:transition_state():463] send defer: 8
+2022-11-21 15:55:06,804 DEBUG   HandlerThread:60596 [handler.py:handle_request():139] handle_request: defer
+2022-11-21 15:55:06,811 INFO    HandlerThread:60596 [handler.py:handle_request_defer():162] handle defer: 8
+2022-11-21 15:55:06,824 DEBUG   SenderThread:60596 [sender.py:send_request():317] send_request: defer
+2022-11-21 15:55:06,825 INFO    SenderThread:60596 [sender.py:send_request_defer():459] handle sender defer: 8
+2022-11-21 15:55:06,825 INFO    SenderThread:60596 [file_pusher.py:finish():168] shutting down file pusher
+2022-11-21 15:55:07,809 INFO    Thread-20 :60596 [upload_job.py:push():143] Uploaded file /home/yy/FGVC/RACNN-pytorch-master/wandb/run-20221121_155426-1i9s9bue/files/conda-environment.yaml
+2022-11-21 15:55:07,890 INFO    Thread-19 :60596 [upload_job.py:push():143] Uploaded file /home/yy/FGVC/RACNN-pytorch-master/wandb/run-20221121_155426-1i9s9bue/files/config.yaml
+2022-11-21 15:55:07,919 WARNING StreamThr :60596 [internal.py:is_dead():385] Internal process exiting, parent pid 60493 disappeared
+2022-11-21 15:55:07,920 ERROR   StreamThr :60596 [internal.py:wandb_internal():147] Internal process shutdown.
+2022-11-21 15:55:07,960 INFO    Thread-17 :60596 [upload_job.py:push():143] Uploaded file /home/yy/FGVC/RACNN-pytorch-master/wandb/run-20221121_155426-1i9s9bue/files/output.log
+2022-11-21 15:55:07,991 INFO    Thread-18 :60596 [upload_job.py:push():143] Uploaded file /home/yy/FGVC/RACNN-pytorch-master/wandb/run-20221121_155426-1i9s9bue/files/requirements.txt
+2022-11-21 15:55:08,061 INFO    Thread-21 :60596 [upload_job.py:push():143] Uploaded file /home/yy/FGVC/RACNN-pytorch-master/wandb/run-20221121_155426-1i9s9bue/files/wandb-summary.json
+2022-11-21 15:55:08,262 INFO    Thread-12 :60596 [sender.py:transition_state():463] send defer: 9
+2022-11-21 15:55:08,263 DEBUG   HandlerThread:60596 [handler.py:handle_request():139] handle_request: defer
+2022-11-21 15:55:08,263 INFO    HandlerThread:60596 [handler.py:handle_request_defer():162] handle defer: 9
+2022-11-21 15:55:08,263 INFO    HandlerThread:60596 [handler.py:finish():814] shutting down handler
+2022-11-21 15:55:08,263 DEBUG   SenderThread:60596 [sender.py:send_request():317] send_request: defer
+2022-11-21 15:55:08,264 INFO    SenderThread:60596 [sender.py:send_request_defer():459] handle sender defer: 9
+2022-11-21 15:55:08,264 INFO    SenderThread:60596 [file_pusher.py:join():173] waiting for file pusher
+2022-11-21 15:55:08,264 INFO    SenderThread:60596 [sender.py:transition_state():463] send defer: 10
+2022-11-21 15:55:08,265 INFO    SenderThread:60596 [sender.py:finish():1331] shutting down sender
+2022-11-21 15:55:08,265 INFO    SenderThread:60596 [file_pusher.py:finish():168] shutting down file pusher
+2022-11-21 15:55:08,265 INFO    SenderThread:60596 [file_pusher.py:join():173] waiting for file pusher
+2022-11-21 15:55:08,571 INFO    WriterThread:60596 [datastore.py:close():279] close: /home/yy/FGVC/RACNN-pytorch-master/wandb/run-20221121_155426-1i9s9bue/run-1i9s9bue.wandb

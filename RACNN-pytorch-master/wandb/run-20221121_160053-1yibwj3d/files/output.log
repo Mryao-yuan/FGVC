@@ -1,0 +1,80 @@
+
+ [*] Set cuda: True
+ [*] Loading dataset...
+ [*] pre_apn_epoch[0], || pre_apn_iter 0 || pre_apn_loss: 0.0533 || Timer: 4.2647sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 20 || pre_apn_loss: 0.0401 || Timer: 0.1451sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 40 || pre_apn_loss: 0.0243 || Timer: 0.1447sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 60 || pre_apn_loss: 0.0363 || Timer: 0.1420sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 80 || pre_apn_loss: 0.0195 || Timer: 0.1880sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 100 || pre_apn_loss: 0.0319 || Timer: 0.1639sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 120 || pre_apn_loss: 0.0515 || Timer: 0.1666sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 140 || pre_apn_loss: 0.0417 || Timer: 0.1427sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 160 || pre_apn_loss: 0.0264 || Timer: 0.1447sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 180 || pre_apn_loss: 0.0189 || Timer: 0.1625sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 200 || pre_apn_loss: 0.0387 || Timer: 0.1560sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 220 || pre_apn_loss: 0.0278 || Timer: 0.1681sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 240 || pre_apn_loss: 0.0432 || Timer: 0.1576sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 260 || pre_apn_loss: 0.0297 || Timer: 0.1454sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 280 || pre_apn_loss: 0.0621 || Timer: 0.1561sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 300 || pre_apn_loss: 0.0188 || Timer: 0.1653sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 320 || pre_apn_loss: 0.0133 || Timer: 0.1780sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 340 || pre_apn_loss: 0.0397 || Timer: 0.1703sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 360 || pre_apn_loss: 0.0166 || Timer: 0.1426sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 380 || pre_apn_loss: 0.0245 || Timer: 0.1694sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 400 || pre_apn_loss: 0.0238 || Timer: 0.1430sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 420 || pre_apn_loss: 0.0175 || Timer: 0.1580sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 440 || pre_apn_loss: 0.0141 || Timer: 0.2102sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 460 || pre_apn_loss: 0.0293 || Timer: 0.1590sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 480 || pre_apn_loss: 0.0242 || Timer: 0.1692sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 500 || pre_apn_loss: 0.0262 || Timer: 0.1420sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 520 || pre_apn_loss: 0.0388 || Timer: 0.1443sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 540 || pre_apn_loss: 0.0589 || Timer: 0.1578sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 560 || pre_apn_loss: 0.0270 || Timer: 0.1480sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 580 || pre_apn_loss: 0.0313 || Timer: 0.1432sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 600 || pre_apn_loss: 0.0201 || Timer: 0.1554sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 620 || pre_apn_loss: 0.0372 || Timer: 0.1490sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 640 || pre_apn_loss: 0.0231 || Timer: 0.1491sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 660 || pre_apn_loss: 0.0084 || Timer: 0.1636sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 680 || pre_apn_loss: 0.0208 || Timer: 0.1581sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 700 || pre_apn_loss: 0.0465 || Timer: 0.1430sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 720 || pre_apn_loss: 0.0326 || Timer: 0.1610sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 740 || pre_apn_loss: 0.0459 || Timer: 0.1498sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 760 || pre_apn_loss: 0.0449 || Timer: 0.1471sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 780 || pre_apn_loss: 0.0519 || Timer: 0.1585sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 800 || pre_apn_loss: 0.0168 || Timer: 0.1521sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 820 || pre_apn_loss: 0.0351 || Timer: 0.1647sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 840 || pre_apn_loss: 0.0317 || Timer: 0.1439sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 860 || pre_apn_loss: 0.0465 || Timer: 0.1548sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 880 || pre_apn_loss: 0.0167 || Timer: 0.1435sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 900 || pre_apn_loss: 0.0220 || Timer: 0.1469sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 920 || pre_apn_loss: 0.0333 || Timer: 0.1449sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 940 || pre_apn_loss: 0.0179 || Timer: 0.1416sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 960 || pre_apn_loss: 0.0342 || Timer: 0.1496sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 980 || pre_apn_loss: 0.0204 || Timer: 0.1422sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 1000 || pre_apn_loss: 0.0371 || Timer: 0.1570sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 1020 || pre_apn_loss: 0.0409 || Timer: 0.1595sec
+(375, 500, 3)
+ [*] pre_apn_epoch[0], || pre_apn_iter 1040 || pre_apn_loss: 0.0301 || Timer: 0.1550sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 1060 || pre_apn_loss: 0.0389 || Timer: 0.1834sec
+(281, 500, 3)
+ [*] pre_apn_epoch[0], || pre_apn_iter 1080 || pre_apn_loss: 0.0597 || Timer: 0.1771sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 1100 || pre_apn_loss: 0.0122 || Timer: 0.1645sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 1120 || pre_apn_loss: 0.0362 || Timer: 0.1420sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 1140 || pre_apn_loss: 0.0185 || Timer: 0.1629sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 1160 || pre_apn_loss: 0.0303 || Timer: 0.1640sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 1180 || pre_apn_loss: 0.0385 || Timer: 0.1457sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 1200 || pre_apn_loss: 0.0249 || Timer: 0.1524sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 1220 || pre_apn_loss: 0.0252 || Timer: 0.1423sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 1240 || pre_apn_loss: 0.0350 || Timer: 0.1451sec
+Traceback (most recent call last):
+  File "/home/yy/FGVC/RACNN-pytorch-master/trainer.py", line 396, in <module>
+    train()
+  File "/home/yy/FGVC/RACNN-pytorch-master/trainer.py", line 92, in train
+    apn_iter, apn_epoch, apn_steps = pretrainAPN(trainset, trainloader)
+  File "/home/yy/FGVC/RACNN-pytorch-master/trainer.py", line 306, in pretrainAPN
+    apn_loss.backward()
+  File "/home/yy/anaconda3/envs/pytorch_gpu/lib/python3.9/site-packages/torch/_tensor.py", line 396, in backward
+    torch.autograd.backward(self, gradient, retain_graph, create_graph, inputs=inputs)
+  File "/home/yy/anaconda3/envs/pytorch_gpu/lib/python3.9/site-packages/torch/autograd/__init__.py", line 173, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+KeyboardInterrupt

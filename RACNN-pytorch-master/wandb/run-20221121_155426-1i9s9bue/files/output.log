@@ -1,0 +1,16 @@
+
+ [*] Set cuda: True
+ [*] Loading dataset...
+ [*] pre_apn_epoch[0], || pre_apn_iter 0 || pre_apn_loss: 0.0677 || Timer: 4.3075sec
+(281, 500, 3)
+ [*] pre_apn_epoch[0], || pre_apn_iter 20 || pre_apn_loss: 0.0436 || Timer: 0.2163sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 40 || pre_apn_loss: 0.0417 || Timer: 0.1418sec
+ [*] pre_apn_epoch[0], || pre_apn_iter 60 || pre_apn_loss: 0.0357 || Timer: 0.1489sec
+Traceback (most recent call last):
+  File "/home/yy/FGVC/RACNN-pytorch-master/trainer.py", line 395, in <module>
+    #train()
+  File "/home/yy/FGVC/RACNN-pytorch-master/trainer.py", line 93, in train
+    apn_iter, apn_epoch, apn_steps = pretrainAPN(trainset, trainloader)
+  File "/home/yy/FGVC/RACNN-pytorch-master/trainer.py", line 316, in pretrainAPN
+    log_apn['apn-loss'] = str(apn_loss.item())
+KeyboardInterrupt

@@ -1,0 +1,108 @@
+
+ [*] Set cuda: True
+ [*] Loading dataset...
+(326, 500, 3)
+response_map: torch.Size([1, 512, 448, 448])
+response_map_mean: torch.Size([512, 448, 448])
+response_map: torch.Size([1, 512, 224, 224])
+response_map_mean: torch.Size([512, 224, 224])
+grad_output torch.Size([4, 3, 224, 224])
+ [*] pre_apn_epoch[0], || pre_apn_iter 0 || pre_apn_loss: 0.0282 || Timer: 4.3075sec
+response_map: torch.Size([1, 512, 448, 448])
+response_map_mean: torch.Size([512, 448, 448])
+response_map: torch.Size([1, 512, 224, 224])
+response_map_mean: torch.Size([512, 224, 224])
+grad_output torch.Size([4, 3, 224, 224])
+response_map: torch.Size([1, 512, 448, 448])
+response_map_mean: torch.Size([512, 448, 448])
+response_map: torch.Size([1, 512, 224, 224])
+response_map_mean: torch.Size([512, 224, 224])
+grad_output torch.Size([4, 3, 224, 224])
+response_map: torch.Size([1, 512, 448, 448])
+response_map_mean: torch.Size([512, 448, 448])
+response_map: torch.Size([1, 512, 224, 224])
+response_map_mean: torch.Size([512, 224, 224])
+grad_output torch.Size([4, 3, 224, 224])
+response_map: torch.Size([1, 512, 448, 448])
+response_map_mean: torch.Size([512, 448, 448])
+response_map: torch.Size([1, 512, 224, 224])
+response_map_mean: torch.Size([512, 224, 224])
+grad_output torch.Size([4, 3, 224, 224])
+response_map: torch.Size([1, 512, 448, 448])
+response_map_mean: torch.Size([512, 448, 448])
+response_map: torch.Size([1, 512, 224, 224])
+response_map_mean: torch.Size([512, 224, 224])
+grad_output torch.Size([4, 3, 224, 224])
+response_map: torch.Size([1, 512, 448, 448])
+response_map_mean: torch.Size([512, 448, 448])
+response_map: torch.Size([1, 512, 224, 224])
+response_map_mean: torch.Size([512, 224, 224])
+grad_output torch.Size([4, 3, 224, 224])
+response_map: torch.Size([1, 512, 448, 448])
+response_map_mean: torch.Size([512, 448, 448])
+response_map: torch.Size([1, 512, 224, 224])
+response_map_mean: torch.Size([512, 224, 224])
+grad_output torch.Size([4, 3, 224, 224])
+response_map: torch.Size([1, 512, 448, 448])
+response_map_mean: torch.Size([512, 448, 448])
+response_map: torch.Size([1, 512, 224, 224])
+response_map_mean: torch.Size([512, 224, 224])
+grad_output torch.Size([4, 3, 224, 224])
+response_map: torch.Size([1, 512, 448, 448])
+response_map_mean: torch.Size([512, 448, 448])
+response_map: torch.Size([1, 512, 224, 224])
+response_map_mean: torch.Size([512, 224, 224])
+grad_output torch.Size([4, 3, 224, 224])
+response_map: torch.Size([1, 512, 448, 448])
+response_map_mean: torch.Size([512, 448, 448])
+response_map: torch.Size([1, 512, 224, 224])
+response_map_mean: torch.Size([512, 224, 224])
+grad_output torch.Size([4, 3, 224, 224])
+response_map: torch.Size([1, 512, 448, 448])
+response_map_mean: torch.Size([512, 448, 448])
+response_map: torch.Size([1, 512, 224, 224])
+response_map_mean: torch.Size([512, 224, 224])
+grad_output torch.Size([4, 3, 224, 224])
+response_map: torch.Size([1, 512, 448, 448])
+response_map_mean: torch.Size([512, 448, 448])
+response_map: torch.Size([1, 512, 224, 224])
+response_map_mean: torch.Size([512, 224, 224])
+grad_output torch.Size([4, 3, 224, 224])
+response_map: torch.Size([1, 512, 448, 448])
+response_map_mean: torch.Size([512, 448, 448])
+response_map: torch.Size([1, 512, 224, 224])
+response_map_mean: torch.Size([512, 224, 224])
+grad_output torch.Size([4, 3, 224, 224])
+response_map: torch.Size([1, 512, 448, 448])
+response_map_mean: torch.Size([512, 448, 448])
+response_map: torch.Size([1, 512, 224, 224])
+response_map_mean: torch.Size([512, 224, 224])
+grad_output torch.Size([4, 3, 224, 224])
+Traceback (most recent call last):
+  File "/home/yy/FGVC/RACNN-pytorch-master/trainer.py", line 396, in <module>
+    train()
+  File "/home/yy/FGVC/RACNN-pytorch-master/trainer.py", line 92, in train
+    apn_iter, apn_epoch, apn_steps = pretrainAPN(trainset, trainloader)
+  File "/home/yy/FGVC/RACNN-pytorch-master/trainer.py", line 260, in pretrainAPN
+    images, labels = next(batch_iterator)
+  File "/home/yy/anaconda3/envs/pytorch_gpu/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 681, in __next__
+    data = self._next_data()
+  File "/home/yy/anaconda3/envs/pytorch_gpu/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 1359, in _next_data
+    idx, data = self._get_data()
+  File "/home/yy/anaconda3/envs/pytorch_gpu/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 1325, in _get_data
+    success, data = self._try_get_data()
+  File "/home/yy/anaconda3/envs/pytorch_gpu/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 1163, in _try_get_data
+    data = self._data_queue.get(timeout=timeout)
+  File "/home/yy/anaconda3/envs/pytorch_gpu/lib/python3.9/multiprocessing/queues.py", line 122, in get
+    return _ForkingPickler.loads(res)
+  File "/home/yy/anaconda3/envs/pytorch_gpu/lib/python3.9/site-packages/torch/multiprocessing/reductions.py", line 297, in rebuild_storage_fd
+    fd = df.detach()
+  File "/home/yy/anaconda3/envs/pytorch_gpu/lib/python3.9/multiprocessing/resource_sharer.py", line 57, in detach
+    with _resource_sharer.get_connection(self._id) as conn:
+  File "/home/yy/anaconda3/envs/pytorch_gpu/lib/python3.9/multiprocessing/resource_sharer.py", line 86, in get_connection
+    c = Client(address, authkey=process.current_process().authkey)
+  File "/home/yy/anaconda3/envs/pytorch_gpu/lib/python3.9/multiprocessing/connection.py", line 507, in Client
+    c = SocketClient(address)
+  File "/home/yy/anaconda3/envs/pytorch_gpu/lib/python3.9/multiprocessing/connection.py", line 635, in SocketClient
+    s.connect(address)
+KeyboardInterrupt

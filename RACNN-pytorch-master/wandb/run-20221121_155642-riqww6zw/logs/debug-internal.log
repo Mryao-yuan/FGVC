@@ -1,0 +1,158 @@
+2022-11-21 15:56:42,065 INFO    StreamThr :63052 [internal.py:wandb_internal():88] W&B internal server running at pid: 63052, started at: 2022-11-21 15:56:42.064068
+2022-11-21 15:56:42,068 DEBUG   HandlerThread:63052 [handler.py:handle_request():139] handle_request: status
+2022-11-21 15:56:42,071 DEBUG   SenderThread:63052 [sender.py:send_request():317] send_request: status
+2022-11-21 15:56:42,074 INFO    WriterThread:63052 [datastore.py:open_for_write():75] open: /home/yy/FGVC/RACNN-pytorch-master/wandb/run-20221121_155642-riqww6zw/run-riqww6zw.wandb
+2022-11-21 15:56:42,074 DEBUG   SenderThread:63052 [sender.py:send():303] send: header
+2022-11-21 15:56:42,075 DEBUG   SenderThread:63052 [sender.py:send():303] send: run
+2022-11-21 15:56:42,960 DEBUG   HandlerThread:63052 [handler.py:handle_request():139] handle_request: check_version
+2022-11-21 15:56:42,966 INFO    SenderThread:63052 [dir_watcher.py:__init__():216] watching files in: /home/yy/FGVC/RACNN-pytorch-master/wandb/run-20221121_155642-riqww6zw/files
+2022-11-21 15:56:42,966 INFO    SenderThread:63052 [sender.py:_start_run_threads():928] run started: riqww6zw with start time 1669017402.056947
+2022-11-21 15:56:42,966 DEBUG   SenderThread:63052 [sender.py:send():303] send: summary
+2022-11-21 15:56:42,966 INFO    SenderThread:63052 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 15:56:42,966 DEBUG   SenderThread:63052 [sender.py:send_request():317] send_request: check_version
+2022-11-21 15:56:43,610 DEBUG   HandlerThread:63052 [handler.py:handle_request():139] handle_request: run_start
+2022-11-21 15:56:43,625 DEBUG   HandlerThread:63052 [system_info.py:__init__():31] System info init
+2022-11-21 15:56:43,625 DEBUG   HandlerThread:63052 [system_info.py:__init__():46] System info init done
+2022-11-21 15:56:43,625 INFO    HandlerThread:63052 [system_monitor.py:start():150] Starting system monitor
+2022-11-21 15:56:43,626 INFO    SystemMonitor:63052 [system_monitor.py:_start():116] Starting system asset monitoring threads
+2022-11-21 15:56:43,626 INFO    HandlerThread:63052 [system_monitor.py:probe():168] Collecting system info
+2022-11-21 15:56:43,626 INFO    SystemMonitor:63052 [interfaces.py:start():168] Started cpu
+2022-11-21 15:56:43,627 INFO    SystemMonitor:63052 [interfaces.py:start():168] Started disk
+2022-11-21 15:56:43,628 INFO    SystemMonitor:63052 [interfaces.py:start():168] Started gpu
+2022-11-21 15:56:43,629 INFO    SystemMonitor:63052 [interfaces.py:start():168] Started memory
+2022-11-21 15:56:43,629 INFO    SystemMonitor:63052 [interfaces.py:start():168] Started network
+2022-11-21 15:56:43,672 DEBUG   HandlerThread:63052 [system_info.py:probe():195] Probing system
+2022-11-21 15:56:43,680 DEBUG   HandlerThread:63052 [system_info.py:_probe_git():180] Probing git
+2022-11-21 15:56:43,689 DEBUG   HandlerThread:63052 [system_info.py:_probe_git():188] Probing git done
+2022-11-21 15:56:43,689 DEBUG   HandlerThread:63052 [system_info.py:probe():241] Probing system done
+2022-11-21 15:56:43,689 DEBUG   HandlerThread:63052 [system_monitor.py:probe():177] {'os': 'Linux-5.4.0-131-generic-x86_64-with-glibc2.27', 'python': '3.9.13', 'heartbeatAt': '2022-11-21T07:56:43.672765', 'startedAt': '2022-11-21T07:56:42.044386', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '/home/yy/FGVC/RACNN-pytorch-master/trainer.py', 'codePath': 'RACNN-pytorch-master/trainer.py', 'git': {'remote': None, 'commit': None}, 'email': '1090050617@qq.com', 'root': '/home/yy/FGVC', 'host': 'inspur-NULL', 'username': 'yy', 'executable': '/home/yy/anaconda3/envs/pytorch_gpu/bin/python', 'cpu_count': 32, 'cpu_count_logical': 64, 'cpu_freq': {'current': 1497.2550937500005, 'min': 800.0, 'max': 3400.0}, 'cpu_freq_per_core': [{'current': 1009.778, 'min': 800.0, 'max': 3400.0}, {'current': 900.0, 'min': 800.0, 'max': 3400.0}, {'current': 1136.158, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 898.252, 'min': 800.0, 'max': 3400.0}, {'current': 801.492, 'min': 800.0, 'max': 3400.0}, {'current': 799.929, 'min': 800.0, 'max': 3400.0}, {'current': 1099.575, 'min': 800.0, 'max': 3400.0}, {'current': 941.235, 'min': 800.0, 'max': 3400.0}, {'current': 798.529, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 900.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.107, 'min': 800.0, 'max': 3400.0}, {'current': 900.0, 'min': 800.0, 'max': 3400.0}, {'current': 1034.882, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 900.0, 'min': 800.0, 'max': 3400.0}, {'current': 2900.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.049, 'min': 800.0, 'max': 3400.0}, {'current': 801.179, 'min': 800.0, 'max': 3400.0}, {'current': 900.0, 'min': 800.0, 'max': 3400.0}, {'current': 2895.382, 'min': 800.0, 'max': 3400.0}, {'current': 2891.158, 'min': 800.0, 'max': 3400.0}, {'current': 2900.005, 'min': 800.0, 'max': 3400.0}, {'current': 934.765, 'min': 800.0, 'max': 3400.0}, {'current': 2900.0, 'min': 800.0, 'max': 3400.0}, {'current': 2900.002, 'min': 800.0, 'max': 3400.0}, {'current': 1681.272, 'min': 800.0, 'max': 3400.0}, {'current': 1788.713, 'min': 800.0, 'max': 3400.0}, {'current': 2900.0, 'min': 800.0, 'max': 3400.0}, {'current': 1565.731, 'min': 800.0, 'max': 3400.0}, {'current': 2908.529, 'min': 800.0, 'max': 3400.0}, {'current': 899.798, 'min': 800.0, 'max': 3400.0}, {'current': 901.807, 'min': 800.0, 'max': 3400.0}, {'current': 1205.99, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 895.416, 'min': 800.0, 'max': 3400.0}, {'current': 798.479, 'min': 800.0, 'max': 3400.0}, {'current': 801.433, 'min': 800.0, 'max': 3400.0}, {'current': 1058.432, 'min': 800.0, 'max': 3400.0}, {'current': 800.086, 'min': 800.0, 'max': 3400.0}, {'current': 799.848, 'min': 800.0, 'max': 3400.0}, {'current': 801.481, 'min': 800.0, 'max': 3400.0}, {'current': 901.882, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 901.914, 'min': 800.0, 'max': 3400.0}, {'current': 1464.371, 'min': 800.0, 'max': 3400.0}, {'current': 801.436, 'min': 800.0, 'max': 3400.0}, {'current': 900.0, 'min': 800.0, 'max': 3400.0}, {'current': 2900.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 798.694, 'min': 800.0, 'max': 3400.0}, {'current': 900.025, 'min': 800.0, 'max': 3400.0}, {'current': 2899.997, 'min': 800.0, 'max': 3400.0}, {'current': 2900.0, 'min': 800.0, 'max': 3400.0}, {'current': 2900.0, 'min': 800.0, 'max': 3400.0}, {'current': 805.15, 'min': 800.0, 'max': 3400.0}, {'current': 2900.002, 'min': 800.0, 'max': 3400.0}, {'current': 2904.801, 'min': 800.0, 'max': 3400.0}, {'current': 1647.177, 'min': 800.0, 'max': 3400.0}, {'current': 1820.208, 'min': 800.0, 'max': 3400.0}, {'current': 2895.517, 'min': 800.0, 'max': 3400.0}, {'current': 1860.407, 'min': 800.0, 'max': 3400.0}, {'current': 2900.0, 'min': 800.0, 'max': 3400.0}], 'disk': {'total': 878.3903999328613, 'used': 815.3928833007812}, 'gpu': 'NVIDIA GeForce RTX 3090', 'gpu_count': 6, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 3090', 'memory_total': 25769803776}, {'name': 'NVIDIA GeForce RTX 3090', 'memory_total': 25769803776}, {'name': 'NVIDIA GeForce RTX 3090', 'memory_total': 25769803776}, {'name': 'NVIDIA GeForce RTX 3090', 'memory_total': 25769803776}, {'name': 'NVIDIA GeForce RTX 3090', 'memory_total': 25769803776}, {'name': 'NVIDIA GeForce RTX 3090', 'memory_total': 25769803776}], 'memory': {'total': 125.55618667602539}}
+2022-11-21 15:56:43,689 INFO    HandlerThread:63052 [system_monitor.py:probe():178] Finished collecting system info
+2022-11-21 15:56:43,689 INFO    HandlerThread:63052 [system_monitor.py:probe():181] Publishing system info
+2022-11-21 15:56:43,689 DEBUG   HandlerThread:63052 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2022-11-21 15:56:43,690 DEBUG   HandlerThread:63052 [system_info.py:_save_pip():67] Saving pip packages done
+2022-11-21 15:56:43,690 DEBUG   HandlerThread:63052 [system_info.py:_save_conda():74] Saving list of conda packages installed into the current environment
+2022-11-21 15:56:43,970 INFO    Thread-13 :63052 [dir_watcher.py:_on_file_created():275] file/dir created: /home/yy/FGVC/RACNN-pytorch-master/wandb/run-20221121_155642-riqww6zw/files/conda-environment.yaml
+2022-11-21 15:56:43,971 INFO    Thread-13 :63052 [dir_watcher.py:_on_file_created():275] file/dir created: /home/yy/FGVC/RACNN-pytorch-master/wandb/run-20221121_155642-riqww6zw/files/requirements.txt
+2022-11-21 15:56:43,972 INFO    Thread-13 :63052 [dir_watcher.py:_on_file_created():275] file/dir created: /home/yy/FGVC/RACNN-pytorch-master/wandb/run-20221121_155642-riqww6zw/files/wandb-summary.json
+2022-11-21 15:56:46,637 DEBUG   HandlerThread:63052 [system_info.py:_save_conda():86] Saving conda packages done
+2022-11-21 15:56:46,639 INFO    HandlerThread:63052 [system_monitor.py:probe():183] Finished publishing system info
+2022-11-21 15:56:46,669 DEBUG   SenderThread:63052 [sender.py:send():303] send: exit
+2022-11-21 15:56:46,669 DEBUG   HandlerThread:63052 [handler.py:handle_request():139] handle_request: poll_exit
+2022-11-21 15:56:46,669 INFO    SenderThread:63052 [sender.py:send_exit():442] handling exit code: 255
+2022-11-21 15:56:46,671 INFO    SenderThread:63052 [sender.py:send_exit():444] handling runtime: 3
+2022-11-21 15:56:46,672 INFO    SenderThread:63052 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 15:56:46,672 INFO    SenderThread:63052 [sender.py:send_exit():450] send defer
+2022-11-21 15:56:46,672 DEBUG   SenderThread:63052 [sender.py:send_request():317] send_request: poll_exit
+2022-11-21 15:56:46,673 DEBUG   SenderThread:63052 [sender.py:send():303] send: files
+2022-11-21 15:56:46,673 DEBUG   HandlerThread:63052 [handler.py:handle_request():139] handle_request: defer
+2022-11-21 15:56:46,673 INFO    SenderThread:63052 [sender.py:_save_file():1171] saving file wandb-metadata.json with policy now
+2022-11-21 15:56:46,673 INFO    HandlerThread:63052 [handler.py:handle_request_defer():162] handle defer: 0
+2022-11-21 15:56:46,674 DEBUG   SenderThread:63052 [sender.py:send_request():317] send_request: defer
+2022-11-21 15:56:46,674 INFO    SenderThread:63052 [sender.py:send_request_defer():459] handle sender defer: 0
+2022-11-21 15:56:46,674 INFO    SenderThread:63052 [sender.py:transition_state():463] send defer: 1
+2022-11-21 15:56:46,675 DEBUG   HandlerThread:63052 [handler.py:handle_request():139] handle_request: defer
+2022-11-21 15:56:46,675 INFO    HandlerThread:63052 [handler.py:handle_request_defer():162] handle defer: 1
+2022-11-21 15:56:46,675 INFO    HandlerThread:63052 [system_monitor.py:finish():160] Stopping system monitor
+2022-11-21 15:56:46,675 DEBUG   SystemMonitor:63052 [system_monitor.py:_start():130] Starting system metrics aggregation loop
+2022-11-21 15:56:46,677 DEBUG   SystemMonitor:63052 [system_monitor.py:_start():137] Finished system metrics aggregation loop
+2022-11-21 15:56:46,677 DEBUG   SystemMonitor:63052 [system_monitor.py:_start():141] Publishing last batch of metrics
+2022-11-21 15:56:46,685 INFO    HandlerThread:63052 [interfaces.py:finish():173] Joined cpu
+2022-11-21 15:56:46,685 INFO    HandlerThread:63052 [interfaces.py:finish():173] Joined disk
+2022-11-21 15:56:46,689 INFO    HandlerThread:63052 [interfaces.py:finish():173] Joined gpu
+2022-11-21 15:56:46,689 INFO    HandlerThread:63052 [interfaces.py:finish():173] Joined memory
+2022-11-21 15:56:46,689 INFO    HandlerThread:63052 [interfaces.py:finish():173] Joined network
+2022-11-21 15:56:46,689 DEBUG   SenderThread:63052 [sender.py:send_request():317] send_request: defer
+2022-11-21 15:56:46,690 INFO    SenderThread:63052 [sender.py:send_request_defer():459] handle sender defer: 1
+2022-11-21 15:56:46,690 INFO    SenderThread:63052 [sender.py:transition_state():463] send defer: 2
+2022-11-21 15:56:46,690 DEBUG   SenderThread:63052 [sender.py:send():303] send: stats
+2022-11-21 15:56:46,691 DEBUG   HandlerThread:63052 [handler.py:handle_request():139] handle_request: defer
+2022-11-21 15:56:46,691 INFO    HandlerThread:63052 [handler.py:handle_request_defer():162] handle defer: 2
+2022-11-21 15:56:46,691 DEBUG   SenderThread:63052 [sender.py:send_request():317] send_request: defer
+2022-11-21 15:56:46,691 INFO    SenderThread:63052 [sender.py:send_request_defer():459] handle sender defer: 2
+2022-11-21 15:56:46,691 INFO    SenderThread:63052 [sender.py:transition_state():463] send defer: 3
+2022-11-21 15:56:46,691 DEBUG   HandlerThread:63052 [handler.py:handle_request():139] handle_request: defer
+2022-11-21 15:56:46,691 INFO    HandlerThread:63052 [handler.py:handle_request_defer():162] handle defer: 3
+2022-11-21 15:56:46,691 DEBUG   SenderThread:63052 [sender.py:send_request():317] send_request: defer
+2022-11-21 15:56:46,692 INFO    SenderThread:63052 [sender.py:send_request_defer():459] handle sender defer: 3
+2022-11-21 15:56:46,692 INFO    SenderThread:63052 [sender.py:transition_state():463] send defer: 4
+2022-11-21 15:56:46,692 DEBUG   HandlerThread:63052 [handler.py:handle_request():139] handle_request: defer
+2022-11-21 15:56:46,692 INFO    HandlerThread:63052 [handler.py:handle_request_defer():162] handle defer: 4
+2022-11-21 15:56:46,692 DEBUG   SenderThread:63052 [sender.py:send():303] send: summary
+2022-11-21 15:56:46,693 INFO    SenderThread:63052 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 15:56:46,693 DEBUG   SenderThread:63052 [sender.py:send_request():317] send_request: defer
+2022-11-21 15:56:46,693 INFO    SenderThread:63052 [sender.py:send_request_defer():459] handle sender defer: 4
+2022-11-21 15:56:46,693 INFO    SenderThread:63052 [sender.py:transition_state():463] send defer: 5
+2022-11-21 15:56:46,693 DEBUG   HandlerThread:63052 [handler.py:handle_request():139] handle_request: defer
+2022-11-21 15:56:46,693 INFO    HandlerThread:63052 [handler.py:handle_request_defer():162] handle defer: 5
+2022-11-21 15:56:46,693 DEBUG   SenderThread:63052 [sender.py:send_request():317] send_request: defer
+2022-11-21 15:56:46,693 INFO    SenderThread:63052 [sender.py:send_request_defer():459] handle sender defer: 5
+2022-11-21 15:56:46,694 INFO    SenderThread:63052 [sender.py:transition_state():463] send defer: 6
+2022-11-21 15:56:46,694 DEBUG   HandlerThread:63052 [handler.py:handle_request():139] handle_request: defer
+2022-11-21 15:56:46,694 INFO    HandlerThread:63052 [handler.py:handle_request_defer():162] handle defer: 6
+2022-11-21 15:56:46,694 DEBUG   SenderThread:63052 [sender.py:send_request():317] send_request: defer
+2022-11-21 15:56:46,694 INFO    SenderThread:63052 [sender.py:send_request_defer():459] handle sender defer: 6
+2022-11-21 15:56:46,694 INFO    SenderThread:63052 [sender.py:transition_state():463] send defer: 7
+2022-11-21 15:56:46,694 DEBUG   HandlerThread:63052 [handler.py:handle_request():139] handle_request: defer
+2022-11-21 15:56:46,694 INFO    HandlerThread:63052 [handler.py:handle_request_defer():162] handle defer: 7
+2022-11-21 15:56:46,695 DEBUG   SenderThread:63052 [sender.py:send_request():317] send_request: defer
+2022-11-21 15:56:46,695 INFO    SenderThread:63052 [sender.py:send_request_defer():459] handle sender defer: 7
+2022-11-21 15:56:46,695 INFO    SenderThread:63052 [dir_watcher.py:finish():362] shutting down directory watcher
+2022-11-21 15:56:46,972 INFO    Thread-13 :63052 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/yy/FGVC/RACNN-pytorch-master/wandb/run-20221121_155642-riqww6zw/files/conda-environment.yaml
+2022-11-21 15:56:46,972 INFO    SenderThread:63052 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/yy/FGVC/RACNN-pytorch-master/wandb/run-20221121_155642-riqww6zw/files/wandb-summary.json
+2022-11-21 15:56:46,973 INFO    SenderThread:63052 [dir_watcher.py:_on_file_created():275] file/dir created: /home/yy/FGVC/RACNN-pytorch-master/wandb/run-20221121_155642-riqww6zw/files/wandb-metadata.json
+2022-11-21 15:56:46,973 INFO    SenderThread:63052 [dir_watcher.py:finish():392] scan: /home/yy/FGVC/RACNN-pytorch-master/wandb/run-20221121_155642-riqww6zw/files
+2022-11-21 15:56:46,973 INFO    SenderThread:63052 [dir_watcher.py:finish():406] scan save: /home/yy/FGVC/RACNN-pytorch-master/wandb/run-20221121_155642-riqww6zw/files/requirements.txt requirements.txt
+2022-11-21 15:56:46,973 INFO    SenderThread:63052 [dir_watcher.py:finish():406] scan save: /home/yy/FGVC/RACNN-pytorch-master/wandb/run-20221121_155642-riqww6zw/files/wandb-metadata.json wandb-metadata.json
+2022-11-21 15:56:46,973 INFO    SenderThread:63052 [dir_watcher.py:finish():406] scan save: /home/yy/FGVC/RACNN-pytorch-master/wandb/run-20221121_155642-riqww6zw/files/config.yaml config.yaml
+2022-11-21 15:56:46,973 INFO    SenderThread:63052 [dir_watcher.py:finish():406] scan save: /home/yy/FGVC/RACNN-pytorch-master/wandb/run-20221121_155642-riqww6zw/files/conda-environment.yaml conda-environment.yaml
+2022-11-21 15:56:46,973 INFO    SenderThread:63052 [dir_watcher.py:finish():406] scan save: /home/yy/FGVC/RACNN-pytorch-master/wandb/run-20221121_155642-riqww6zw/files/wandb-summary.json wandb-summary.json
+2022-11-21 15:56:46,973 INFO    SenderThread:63052 [sender.py:transition_state():463] send defer: 8
+2022-11-21 15:56:46,984 DEBUG   HandlerThread:63052 [handler.py:handle_request():139] handle_request: defer
+2022-11-21 15:56:46,989 INFO    HandlerThread:63052 [handler.py:handle_request_defer():162] handle defer: 8
+2022-11-21 15:56:46,993 DEBUG   SenderThread:63052 [sender.py:send_request():317] send_request: defer
+2022-11-21 15:56:46,993 INFO    SenderThread:63052 [sender.py:send_request_defer():459] handle sender defer: 8
+2022-11-21 15:56:46,994 INFO    SenderThread:63052 [file_pusher.py:finish():168] shutting down file pusher
+2022-11-21 15:56:47,920 INFO    Thread-16 :63052 [upload_job.py:push():143] Uploaded file /tmp/tmpob5z4mrkwandb/27rn4ust-wandb-metadata.json
+2022-11-21 15:56:48,045 INFO    Thread-19 :63052 [upload_job.py:push():143] Uploaded file /home/yy/FGVC/RACNN-pytorch-master/wandb/run-20221121_155642-riqww6zw/files/conda-environment.yaml
+2022-11-21 15:56:48,046 INFO    Thread-17 :63052 [upload_job.py:push():143] Uploaded file /home/yy/FGVC/RACNN-pytorch-master/wandb/run-20221121_155642-riqww6zw/files/requirements.txt
+2022-11-21 15:56:48,061 INFO    Thread-20 :63052 [upload_job.py:push():143] Uploaded file /home/yy/FGVC/RACNN-pytorch-master/wandb/run-20221121_155642-riqww6zw/files/wandb-summary.json
+2022-11-21 15:56:48,139 INFO    Thread-18 :63052 [upload_job.py:push():143] Uploaded file /home/yy/FGVC/RACNN-pytorch-master/wandb/run-20221121_155642-riqww6zw/files/config.yaml
+2022-11-21 15:56:48,340 INFO    Thread-12 :63052 [sender.py:transition_state():463] send defer: 9
+2022-11-21 15:56:48,340 DEBUG   HandlerThread:63052 [handler.py:handle_request():139] handle_request: defer
+2022-11-21 15:56:48,340 INFO    HandlerThread:63052 [handler.py:handle_request_defer():162] handle defer: 9
+2022-11-21 15:56:48,340 DEBUG   SenderThread:63052 [sender.py:send_request():317] send_request: defer
+2022-11-21 15:56:48,341 INFO    SenderThread:63052 [sender.py:send_request_defer():459] handle sender defer: 9
+2022-11-21 15:56:48,341 INFO    SenderThread:63052 [file_pusher.py:join():173] waiting for file pusher
+2022-11-21 15:56:48,341 INFO    SenderThread:63052 [sender.py:transition_state():463] send defer: 10
+2022-11-21 15:56:48,341 DEBUG   HandlerThread:63052 [handler.py:handle_request():139] handle_request: defer
+2022-11-21 15:56:48,341 INFO    HandlerThread:63052 [handler.py:handle_request_defer():162] handle defer: 10
+2022-11-21 15:56:48,341 DEBUG   SenderThread:63052 [sender.py:send_request():317] send_request: defer
+2022-11-21 15:56:48,342 INFO    SenderThread:63052 [sender.py:send_request_defer():459] handle sender defer: 10
+2022-11-21 15:56:48,923 INFO    SenderThread:63052 [sender.py:transition_state():463] send defer: 11
+2022-11-21 15:56:48,924 DEBUG   HandlerThread:63052 [handler.py:handle_request():139] handle_request: defer
+2022-11-21 15:56:48,924 INFO    HandlerThread:63052 [handler.py:handle_request_defer():162] handle defer: 11
+2022-11-21 15:56:48,924 DEBUG   SenderThread:63052 [sender.py:send_request():317] send_request: defer
+2022-11-21 15:56:48,924 INFO    SenderThread:63052 [sender.py:send_request_defer():459] handle sender defer: 11
+2022-11-21 15:56:48,924 INFO    SenderThread:63052 [sender.py:transition_state():463] send defer: 12
+2022-11-21 15:56:48,925 DEBUG   SenderThread:63052 [sender.py:send():303] send: final
+2022-11-21 15:56:48,925 DEBUG   HandlerThread:63052 [handler.py:handle_request():139] handle_request: defer
+2022-11-21 15:56:48,925 DEBUG   SenderThread:63052 [sender.py:send():303] send: footer
+2022-11-21 15:56:48,925 INFO    HandlerThread:63052 [handler.py:handle_request_defer():162] handle defer: 12
+2022-11-21 15:56:48,925 DEBUG   SenderThread:63052 [sender.py:send_request():317] send_request: defer
+2022-11-21 15:56:48,925 INFO    SenderThread:63052 [sender.py:send_request_defer():459] handle sender defer: 12
+2022-11-21 15:56:48,927 DEBUG   HandlerThread:63052 [handler.py:handle_request():139] handle_request: poll_exit
+2022-11-21 15:56:48,927 DEBUG   SenderThread:63052 [sender.py:send_request():317] send_request: poll_exit
+2022-11-21 15:56:48,928 DEBUG   HandlerThread:63052 [handler.py:handle_request():139] handle_request: server_info
+2022-11-21 15:56:48,928 DEBUG   SenderThread:63052 [sender.py:send_request():317] send_request: server_info
+2022-11-21 15:56:48,930 DEBUG   HandlerThread:63052 [handler.py:handle_request():139] handle_request: get_summary
+2022-11-21 15:56:48,931 DEBUG   HandlerThread:63052 [handler.py:handle_request():139] handle_request: sampled_history
+2022-11-21 15:56:49,817 INFO    MainThread:63052 [wandb_run.py:_footer_history_summary_info():3377] rendering history
+2022-11-21 15:56:49,817 INFO    MainThread:63052 [wandb_run.py:_footer_history_summary_info():3409] rendering summary
+2022-11-21 15:56:49,818 INFO    MainThread:63052 [wandb_run.py:_footer_sync_info():3333] logging synced files
+2022-11-21 15:56:49,819 DEBUG   HandlerThread:63052 [handler.py:handle_request():139] handle_request: shutdown
+2022-11-21 15:56:49,819 INFO    HandlerThread:63052 [handler.py:finish():814] shutting down handler
+2022-11-21 15:56:49,925 INFO    WriterThread:63052 [datastore.py:close():279] close: /home/yy/FGVC/RACNN-pytorch-master/wandb/run-20221121_155642-riqww6zw/run-riqww6zw.wandb
+2022-11-21 15:56:50,816 INFO    SenderThread:63052 [sender.py:finish():1331] shutting down sender
+2022-11-21 15:56:50,817 INFO    SenderThread:63052 [file_pusher.py:finish():168] shutting down file pusher
+2022-11-21 15:56:50,817 INFO    SenderThread:63052 [file_pusher.py:join():173] waiting for file pusher
+2022-11-21 15:56:50,822 INFO    MainThread:63052 [internal.py:handle_exit():78] Internal process exited
