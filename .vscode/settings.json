@@ -1,0 +1,6 @@
+{
+    "python.analysis.extraPaths": [
+        "./NetModel",
+        "./Deep-Descriptor-Transforming"
+    ]
+}

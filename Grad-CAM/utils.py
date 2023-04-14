@@ -1,30 +1,33 @@
 import cv2
 import numpy as np
 
+
 # 从最后一层提取激活和梯度信息
 class ActivationsAndGradients:
-    """ Class for extracting activations and
-    registering gradients from targeted intermediate layers """
+    """Class for extracting activations and
+    registering gradients from targeted intermediate layers"""
 
     def __init__(self, model, target_layers, reshape_transform):
-        self.model = model      # 模型
-        self.gradients = []     # 梯度
-        self.activations = []   # 激活
+        self.model = model  # 模型
+        self.gradients = []  # 梯度
+        self.activations = []  # 激活
         self.reshape_transform = reshape_transform
         self.handles = []
-        for target_layer in target_layers:      # 遍历最后一层
+        for target_layer in target_layers:  # 遍历最后一层
             self.handles.append(
-                target_layer.register_forward_hook(  
-                    self.save_activation))
+                target_layer.register_forward_hook(self.save_activation)
+            )
             # Backward compatibility with older pytorch versions:
-            if hasattr(target_layer, 'register_full_backward_hook'):  # 判断是否已经注册前向传播钩子函数
+            if hasattr(target_layer, "register_full_backward_hook"):  # 判断是否已经注册前向传播钩子函数
                 self.handles.append(
-                    target_layer.register_full_backward_hook( # 正向传播钩子函数,用于获取梯度
-                        self.save_gradient))
+                    target_layer.register_full_backward_hook(  # 正向传播钩子函数,用于获取梯度
+                        self.save_gradient
+                    )
+                )
             else:
                 self.handles.append(
-                    target_layer.register_backward_hook(      # 反向传播钩子函数
-                        self.save_gradient))
+                    target_layer.register_backward_hook(self.save_gradient)  # 反向传播钩子函数
+                )
 
     def save_activation(self, module, input, output):
         activation = output
@@ -48,13 +51,10 @@ class ActivationsAndGradients:
         for handle in self.handles:
             handle.remove()
 
+
 # GradCAM 方法
 class GradCAM:
-    def __init__(self,
-                 model,
-                 target_layers,
-                 reshape_transform=None,
-                 use_cuda=False):
+    def __init__(self, model, target_layers, reshape_transform=None, use_cuda=False):
         self.model = model.eval()
         self.target_layers = target_layers
         self.reshape_transform = reshape_transform
@@ -62,7 +62,8 @@ class GradCAM:
         if self.cuda:
             self.model = model.cuda()
         self.activations_and_grads = ActivationsAndGradients(
-            self.model, target_layers, reshape_transform)
+            self.model, target_layers, reshape_transform
+        )
 
     """ Get a vector of weights for every channel in the target layer.
         Methods that return weights channels,
@@ -70,7 +71,9 @@ class GradCAM:
 
     @staticmethod
     def get_cam_weights(grads):
-        return np.mean(grads, axis=(2, 3), keepdims=True)   # 对宽高求均值 ==>global average pool
+        return np.mean(
+            grads, axis=(2, 3), keepdims=True
+        )  # 对宽高求均值 ==>global average pool
 
     @staticmethod
     def get_loss(output, target_category):
@@ -81,8 +84,8 @@ class GradCAM:
 
     def get_cam_image(self, activations, grads):
         weights = self.get_cam_weights(grads)
-        weighted_activations = weights * activations    #     
-        cam = weighted_activations.sum(axis=1)          # 通道上权重求和 
+        weighted_activations = weights * activations  #
+        cam = weighted_activations.sum(axis=1)  # 通道上权重求和
 
         return cam
 
@@ -92,10 +95,12 @@ class GradCAM:
         return width, height
 
     def compute_cam_per_layer(self, input_tensor):
-        activations_list = [a.cpu().data.numpy()
-                            for a in self.activations_and_grads.activations]
-        grads_list = [g.cpu().data.numpy()
-                      for g in self.activations_and_grads.gradients]
+        activations_list = [
+            a.cpu().data.numpy() for a in self.activations_and_grads.activations
+        ]
+        grads_list = [
+            g.cpu().data.numpy() for g in self.activations_and_grads.gradients
+        ]
         target_size = self.get_target_width_height(input_tensor)
 
         cam_per_target_layer = []
@@ -128,21 +133,22 @@ class GradCAM:
 
         return result
 
+    # 类似 forward 调用函数
     def __call__(self, input_tensor, target_category=None):
-
         if self.cuda:
             input_tensor = input_tensor.cuda()
 
         # 正向传播得到网络输出logits(未经过softmax)
         output = self.activations_and_grads(input_tensor)
         if isinstance(target_category, int):
+            # print("type :", type(target_category))
             target_category = [target_category] * input_tensor.size(0)
 
         if target_category is None:
             target_category = np.argmax(output.cpu().data.numpy(), axis=-1)
             print(f"category id: {target_category}")
         else:
-            assert (len(target_category) == input_tensor.size(0))
+            assert len(target_category) == input_tensor.size(0)
 
         self.model.zero_grad()
         loss = self.get_loss(output, target_category)
@@ -160,26 +166,32 @@ class GradCAM:
         cam_per_layer = self.compute_cam_per_layer(input_tensor)
         return self.aggregate_multi_layers(cam_per_layer)
 
+    # 收回对象,消除
     def __del__(self):
         self.activations_and_grads.release()
 
+    # 类似 with ... open 上下文机制
     def __enter__(self):
         return self
 
+    # 与 enter 并用，捕获异常
     def __exit__(self, exc_type, exc_value, exc_tb):
         self.activations_and_grads.release()
         if isinstance(exc_value, IndexError):
             # Handle IndexError here...
             print(
-                f"An exception occurred in CAM with block: {exc_type}. Message: {exc_value}")
+                f"An exception occurred in CAM with block: {exc_type}. Message: {exc_value}"
+            )
             return True
 
 
-def show_cam_on_image(img: np.ndarray,
-                      mask: np.ndarray,
-                      use_rgb: bool = False,
-                      colormap: int = cv2.COLORMAP_JET) -> np.ndarray:
-    """ This function overlays the cam mask on the image as an heatmap.
+def show_cam_on_image(
+    img: np.ndarray,
+    mask: np.ndarray,
+    use_rgb: bool = False,
+    colormap: int = cv2.COLORMAP_JET,
+) -> np.ndarray:
+    """This function overlays the cam mask on the image as an heatmap.
     By default the heatmap is in BGR format.
 
     :param img: The base image in RGB or BGR format.
@@ -188,19 +200,21 @@ def show_cam_on_image(img: np.ndarray,
     :param colormap: The OpenCV colormap to be used.
     :returns: The default image with the cam overlay.
     """
-
     heatmap = cv2.applyColorMap(np.uint8(255 * mask), colormap)
     if use_rgb:
         heatmap = cv2.cvtColor(heatmap, cv2.COLOR_BGR2RGB)
     heatmap = np.float32(heatmap) / 255
 
     if np.max(img) > 1:
-        raise Exception(
-            "The input image should np.float32 in the range [0, 1]")
+        raise Exception("The input image should np.float32 in the range [0, 1]")
 
+    # print("heatmap", heatmap.shape)
+    # print("image ", img.shape)
+    # exit(1)
     cam = heatmap + img
     cam = cam / np.max(cam)
     return np.uint8(255 * cam)
+
 
 # 从中心裁剪图片
 def center_crop_img(img: np.ndarray, size: int):
@@ -208,7 +222,7 @@ def center_crop_img(img: np.ndarray, size: int):
 
     if w == h == size:  # 无需裁剪
         return img
-    # 小的保留,大的裁剪 
+    # 小的保留,大的裁剪
     if w < h:
         ratio = size / w
         new_w = size
@@ -222,9 +236,9 @@ def center_crop_img(img: np.ndarray, size: int):
 
     if new_w == size:
         h = (new_h - size) // 2
-        img = img[h: h+size]
+        img = img[h : h + size]
     else:
         w = (new_w - size) // 2
-        img = img[:, w: w+size]
+        img = img[:, w : w + size]
 
     return img

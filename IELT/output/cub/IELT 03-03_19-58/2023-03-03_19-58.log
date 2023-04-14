@@ -1,0 +1,48 @@
+================================================================================
+ Fine-Grained Visual Classification via Internal Ensemble Learning Transformer
+                            Pytorch Implementation
+================================================================================
+Author:		Xu Qin,		Wang Jiahui,		Jiang Bo,		Luo Bin
+Institute:	Anhui University					Date: 2023-02-13
+--------------------------------------------------------------------------------
+Python Version: 3.9.13         Pytorch Version: 1.12.1+cu116         Cuda Version: 11.6
+-------------------------------------------------------------------------------- 
+
+============================     Data Settings      ============================
+dataset       cub                       batch_size    16                     
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+data_root     /data0/hwl_data/FGVC/PLANTS/dataset   img_size      448                    
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+resize        600                       padding       0                      
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+no_crop       0                         autoaug       0                      
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+blur          0.0                       color         0.4                    
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+saturation    0.0                       hue           0.0                    
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+mixup         0.0                       cutmix        0.0                    
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+rotate        0.0                       log_path      ./output/cub/IELT 03-03_19-58   
+============================    Hyper Parameters    ============================
+vote_perhead  24            update_warm   500           loss_alpha    0.4         
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+total_num     126           fix           1             dsm           1           
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+cam           1             assess        0             
+============================   Training Settings    ============================
+start_epoch   0             epochs        50            warmup_epochs 0           
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+weight_decay  0             clip_grad     None          checkpoint    1           
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+lr            0.000625      scheduler     cosine        lr_epoch_update0           
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+optimizer     SGD           freeze_backbone0             eps           1e-08       
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+betas         0.9,0.999     momentum      0.9           
+============================     Other Settings     ============================
+amp           1             output        ./output      exp_name      cub         
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+log_name      IELT          eval_every    1             seed          42          
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+eval_mode     0             throughput    0             fused_window  1             

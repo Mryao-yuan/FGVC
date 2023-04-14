@@ -1,0 +1,71 @@
+cuda_visible: '3'
+data:
+  autoaug: false
+  batch_size: 16
+  blur: 0.0
+  color: 0.4
+  cutmix: 0.0
+  data_root: /data0/hwl_data/FGVC/PLANTS/dataset
+  dataset: cub
+  hue: 0.0
+  img_size: 448
+  log_path: ./output/cub/IELT 03-03_19-29
+  mixup: 0.0
+  no_crop: false
+  padding: 0
+  resize: 600
+  rotate: 0.0
+  saturation: 0.0
+device: cuda
+local_rank: -1
+misc:
+  amp: true
+  eval_every: 1
+  eval_mode: false
+  exp_name: cub
+  fused_window: true
+  log_name: IELT
+  output: ./output
+  seed: 42
+  throughput: false
+model:
+  baseline_model: false
+  drop_path: 0.0
+  dropout: 0.0
+  label_smooth: 0.0
+  name: ViT-B_16
+  num_classes: 200
+  parameters: 0
+  pre_suffix: .npz
+  pre_version: ''
+  pretrained: pretrained/ViT-B_16.npz
+  resume: ''
+  type: ViT
+nprocess: 1
+parameters:
+  assess: false
+  cam: true
+  dsm: true
+  fix: true
+  loss_alpha: 0.4
+  total_num: 126
+  update_warm: 500
+  vote_perhead: 24
+train:
+  betas:
+  - 0.9
+  - 0.999
+  checkpoint: true
+  clip_grad: null
+  epochs: 50
+  eps: 1.0e-08
+  freeze_backbone: false
+  lr: 0.000625
+  lr_epoch_update: false
+  momentum: 0.9
+  optimizer: SGD
+  scheduler: cosine
+  start_epoch: 0
+  warmup_epochs: 0
+  weight_decay: 0
+write: true

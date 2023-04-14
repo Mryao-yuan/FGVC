@@ -14,7 +14,7 @@ from torch.autograd import Variable
 import torch.utils.data as data
 import torch.nn.functional as F
 from data import CUB_loader
-from data.CUB_loader import CUB200_loader, dataset_path,test_path
+from data.CUB_loader import CUB200_loader, dataset_path, test_path
 
 import cv2
 
@@ -22,16 +22,17 @@ from models import RACNN, pairwise_ranking_loss, multitask_loss
 from models.RACNN import *
 from utils import save_img
 import wandb
+
 # 初始化wandb的格式
 # wandb.init(project='bird_200',name=time.strftime('%m-%d-%H:%M:%S'))
 import argparse
 
-device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
+device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
-parser = argparse.ArgumentParser(description='Training arguments')
-parser.add_argument('--cuda', default=True, type=bool, help="use cuda to train")
-parser.add_argument('--lr', default=0.01, type=float, help="initial learning rate")
-parser.add_argument('--batch_size', default=1, type=int, help="run for times")
+parser = argparse.ArgumentParser(description="Training arguments")
+parser.add_argument("--cuda", default=True, type=bool, help="use cuda to train")
+parser.add_argument("--lr", default=0.01, type=float, help="initial learning rate")
+parser.add_argument("--batch_size", default=1, type=int, help="run for times")
 # 参数通过 train.sh 指定为 cuda0
 args = parser.parse_args()
 decay_steps = [20, 40]  # based on epoch
@@ -54,9 +55,14 @@ else:
 #     net.module.b3.parameters()) + list(net.module.classifier1.parameters()) + list(
 #    net.module.classifier2.parameters()) + list(net.module.classifier3.parameters())
 
-cls_params = list(net.b1.parameters()) + list(net.b2.parameters()) + list(
-    net.b3.parameters()) + list(net.classifier1.parameters()) + list(
-    net.classifier2.parameters()) + list(net.classifier3.parameters())
+cls_params = (
+    list(net.b1.parameters())
+    + list(net.b2.parameters())
+    + list(net.b3.parameters())
+    + list(net.classifier1.parameters())
+    + list(net.classifier2.parameters())
+    + list(net.classifier3.parameters())
+)
 
 opt1 = optim.SGD(cls_params, lr=args.lr, momentum=0.9, weight_decay=0.0005)
 # 注意力建议网络参数
@@ -67,6 +73,7 @@ opt2 = optim.SGD(apn_params, lr=args.lr, momentum=0.9, weight_decay=0.0005)
 #     num_format = "{num:.{points}f}"
 #     num = num_format.format(num=float_data, points=points)
 #     return float(num)
+
 
 def train():
     log_train = {}
@@ -80,12 +87,22 @@ def train():
 
     # dataset_path = '/data0/hwl_data/FGVC/CUB/'
     # 数据载入
-    trainset = CUB200_loader(dataset_path, split='train')
-    trainloader = data.DataLoader(trainset, batch_size=4,
-                                  shuffle=True, collate_fn=trainset.CUB_collate, num_workers=4)
-    testset = CUB200_loader(dataset_path, split='test')
-    testloader = data.DataLoader(testset, batch_size=4,
-                                 shuffle=False, collate_fn=testset.CUB_collate, num_workers=4)
+    trainset = CUB200_loader(dataset_path, split="train")
+    trainloader = data.DataLoader(
+        trainset,
+        batch_size=4,
+        shuffle=True,
+        collate_fn=trainset.CUB_collate,
+        num_workers=4,
+    )
+    testset = CUB200_loader(dataset_path, split="test")
+    testloader = data.DataLoader(
+        testset,
+        batch_size=4,
+        shuffle=False,
+        collate_fn=testset.CUB_collate,
+        num_workers=4,
+    )
     # 迭代
     test_sample, _ = next(iter(testloader))
     # 预训练特征注意力网络
@@ -100,11 +117,14 @@ def train():
     apn_tol = 0
     batch_iterator = iter(trainloader)
     # 迭代500000 次或分类损失和apn损失误差足够小
-    while ((old_cls_loss - new_cls_loss) ** 2 > 1e-7) and ((old_apn_loss - new_apn_loss) ** 2 > 1e-7) and (
-            iteration < 500000):
+    while (
+        ((old_cls_loss - new_cls_loss) ** 2 > 1e-7)
+        and ((old_apn_loss - new_apn_loss) ** 2 > 1e-7)
+        and (iteration < 500000)
+    ):
         # until the two type of losses no longer change
-        print(' [*] Swtich optimize parameters to Class')
-        while ((cls_tol < 10) and (cls_iter % 5000 != 0)): # 分类损失收敛次数超过十次
+        print(" [*] Swtich optimize parameters to Class")
+        while (cls_tol < 10) and (cls_iter % 5000 != 0):  # 分类损失收敛次数超过十次
             if (not batch_iterator) or (iteration % epoch_size == 0):
                 batch_iterator = iter(trainloader)
 
@@ -128,7 +148,7 @@ def train():
 
             opt1.zero_grad()
             new_cls_losses = multitask_loss(logits, labels)
-            new_cls_loss = sum(new_cls_losses) # 分类损失
+            new_cls_loss = sum(new_cls_losses)  # 分类损失
             # 分类损失反向传播
             new_cls_loss.backward()
             opt1.step()
@@ -148,8 +168,10 @@ def train():
             iteration += 1
             cls_iter += 1
             if (cls_iter % 20) == 0:
-                print(" [*] cls_epoch[%d], Iter %d || cls_iter %d || cls_loss: %.4f || Timer: %.4fsec" % (
-                    cls_epoch, iteration, cls_iter, new_cls_loss.item(), (t1 - t0)))
+                print(
+                    " [*] cls_epoch[%d], Iter %d || cls_iter %d || cls_loss: %.4f || Timer: %.4fsec"
+                    % (cls_epoch, iteration, cls_iter, new_cls_loss.item(), (t1 - t0))
+                )
         # 迭代图像
         images, labels = next(batch_iterator)
         # if args.cuda:
@@ -162,16 +184,16 @@ def train():
             pred = [logit[i][labels[i]] for logit in logits]
             preds.append(pred)
         new_apn_loss = pairwise_ranking_loss(preds)
-        #logger.scalar_summary('rank_loss', new_apn_loss.item(), iteration + 1)
-        log_train['rank_loss']=new_apn_loss.item()
+        # logger.scalar_summary('rank_loss', new_apn_loss.item(), iteration + 1)
+        log_train["rank_loss"] = new_apn_loss.item()
         iteration += 1
         # cls_iter += 1
-        test(testloader, iteration) # 测试
+        test(testloader, iteration)  # 测试
         # continue
-        print(' [*] Swtich optimize parameters to APN')
+        print(" [*] Swtich optimize parameters to APN")
         switch_step += 1
 
-        while ((apn_tol < 10) and apn_iter % 5000 != 0):
+        while (apn_tol < 10) and apn_iter % 5000 != 0:
             if (not batch_iterator) or (iteration % epoch_size == 0):
                 batch_iterator = iter(trainloader)
 
@@ -207,12 +229,14 @@ def train():
             else:
                 apn_tol = 0
 
-            #logger.scalar_summary('rank_loss', new_apn_loss.item(), iteration + 1)
+            # logger.scalar_summary('rank_loss', new_apn_loss.item(), iteration + 1)
             iteration += 1
             apn_iter += 1
             if (apn_iter % 20) == 0:
-                print(" [*] apn_epoch[%d], Iter %d || apn_iter %d || apn_loss: %.4f || Timer: %.4fsec" % (
-                    apn_epoch, iteration, apn_iter, new_apn_loss.item(), (t1 - t0)))
+                print(
+                    " [*] apn_epoch[%d], Iter %d || apn_iter %d || apn_loss: %.4f || Timer: %.4fsec"
+                    % (apn_epoch, iteration, apn_iter, new_apn_loss.item(), (t1 - t0))
+                )
 
         switch_step += 1
 
@@ -223,9 +247,9 @@ def train():
         logits, _, _, _ = net(images)
         new_cls_losses = multitask_loss(logits, labels)
         new_cls_loss = sum(new_cls_losses)
-        #logger.scalar_summary('cls_loss', new_cls_loss.item(), iteration + 1)
-        log_train['cla_loss']=new_cls_loss.item()
-        #wandb.log(log_train)
+        # logger.scalar_summary('cls_loss', new_cls_loss.item(), iteration + 1)
+        log_train["cla_loss"] = new_cls_loss.item()
+        # wandb.log(log_train)
         iteration += 1
         cls_iter += 1
         apn_iter += 1
@@ -236,13 +260,13 @@ def train():
         # visualize cropped inputs
         # save_img(x1, path=f'samples/iter_{iteration}@2x.jpg', annotation=f'loss = {avg_loss:.7f}, step = {iteration}')
         # save_img(x2, path=f'samples/iter_{iteration}@4x.jpg', annotation=f'loss = {avg_loss:.7f}, step = {iteration}')
-        #torch.save(net.state_dict, 'ckpt/RACNN_vgg_CUB200_iter%d.pth' % iteration)
+        # torch.save(net.state_dict, 'ckpt/RACNN_vgg_CUB200_iter%d.pth' % iteration)
 
 
 # 特征注意网络的预训练
 def pretrainAPN(trainset, trainloader):
-    log_apn={}
-    epoch_size = len(trainset) // 4 # batch_size = 4
+    log_apn = {}
+    epoch_size = len(trainset) // 4  # batch_size = 4
     apn_steps, apn_epoch = 1, -1
 
     batch_iterator = iter(trainloader)
@@ -268,12 +292,12 @@ def pretrainAPN(trainset, trainloader):
 
         t0 = time.time()
         # 获取卷积核注意力特征
-        _, conv5s, attens, _ = net(images) # 优化区域
+        _, conv5s, attens, _ = net(images)  # 优化区域
 
         opt2.zero_grad()
         # search regions with the highest response value in conv5
         weak_loc = []
-        for i in range(len(conv5s)): # 两个不同尺度的迭代最高响应值
+        for i in range(len(conv5s)):  # 两个不同尺度的迭代最高响应值
             # 设定tl为边长的1/3(tx,ty,tl)
             loc_label = torch.ones([images.size(0), 3]) * 0.33  # tl = 0.25, fixed
             resize = 448
@@ -283,45 +307,56 @@ def pretrainAPN(trainset, trainloader):
             if torch.cuda.is_available():
                 # loc_label = loc_label.cuda()
                 loc_label = loc_label.to(device)
-            
-            for j in range(images.size(0)): # 迭代batch（4张图片一次）  torch.Size([4, 3, 448, 448])
-                response_map = conv5s[i][j] # torch.Size([512, 28, 28])
-                response_map = F.interpolate(response_map.unsqueeze(0), size=[resize, resize]) # 上采样
+
+            for j in range(
+                images.size(0)
+            ):  # 迭代batch（4张图片一次）  torch.Size([4, 3, 448, 448])
+                response_map = conv5s[i][j]  # torch.Size([512, 28, 28])
+                response_map = F.interpolate(
+                    response_map.unsqueeze(0), size=[resize, resize]
+                )  # 上采样
                 # print('response_map:',response_map.shape)
                 response_map = response_map.mean(0)  # 对通道求平均
-                # print('response_map_mean:',response_map.shape)               
-                rawmaxidx = response_map.view(-1).max(0)[1] # 特征图张开获取行最大的下标
+                # print('response_map_mean:',response_map.shape)
+                rawmaxidx = response_map.view(-1).max(0)[1]  # 特征图张开获取行最大的下标
                 idx = []
                 for d in list(response_map.size())[::-1]:
-                    idx.append(rawmaxidx % d) #  在原始图上的横坐标  
-                    rawmaxidx = rawmaxidx / d # 下一个行
-                loc_label[j, 0] = (idx[1].float() + 0.5) / response_map.size(0) # 将中心点坐标放入local_label
+                    idx.append(rawmaxidx % d)  #  在原始图上的横坐标
+                    rawmaxidx = rawmaxidx / d  #  下一个行
+                loc_label[j, 0] = (idx[1].float() + 0.5) / response_map.size(
+                    0
+                )  # 将中心点坐标放入local_label
                 loc_label[j, 1] = (idx[0].float() + 0.5) / response_map.size(1)
             weak_loc.append(loc_label)
-        weak_loss1 = F.smooth_l1_loss(attens[0], weak_loc[0]) # 计算边框的损失
+        weak_loss1 = F.smooth_l1_loss(
+            attens[0], weak_loc[0]
+        )  # 计算边框的损失(卷积获取的区域与本地基于相应区域进行损失计算)
         weak_loss2 = F.smooth_l1_loss(attens[1], weak_loc[1])
         apn_loss = weak_loss1 + weak_loss2
-        apn_loss.backward() # 更新裁剪区域
-        opt2.step()     # 梯度优化
+        apn_loss.backward()  # 更新裁剪区域
+        opt2.step()  # 梯度优化
         t1 = time.time()
 
         if (iteration % 20) == 0:
-            print(" [*] pre_apn_epoch[%d], || pre_apn_iter %d || pre_apn_loss: %.4f || Timer: %.4fsec" % (
-                apn_epoch, iteration, apn_loss.item(), (t1 - t0)))
-        log_apn['apn-epoch'] = apn_epoch
-        log_apn['apn-iter'] = iteration
-        
+            print(
+                " [*] pre_apn_epoch[%d], || pre_apn_iter %d || pre_apn_loss: %.4f || Timer: %.4fsec"
+                % (apn_epoch, iteration, apn_loss.item(), (t1 - t0))
+            )
+        log_apn["apn-epoch"] = apn_epoch
+        log_apn["apn-iter"] = iteration
+
         # log_apn['apn-loss'] = get_format_num(apn_loss.item())
-        log_apn['apn-loss'] = apn_loss.item()
-        #wandb.log(log_apn)
-        
-        #logger.scalar_summary('pre_apn_loss', apn_loss.item(), iteration + 1)
-    # apn_iter apn_epoch apn_steps    
+        log_apn["apn-loss"] = apn_loss.item()
+        # wandb.log(log_apn)
+
+        # logger.scalar_summary('pre_apn_loss', apn_loss.item(), iteration + 1)
+    # apn_iter apn_epoch apn_steps
     return 2000, apn_epoch, apn_steps
+
 
 # 验证准确率
 def test(testloader, iteration):
-    log_val={}
+    log_val = {}
     net.eval()
     with torch.no_grad():
         corrects1 = 0
@@ -348,8 +383,7 @@ def test(testloader, iteration):
             test_cls_losses = multitask_loss(logits, test_labels)
             # 测试注意力损失
             test_apn_loss = pairwise_ranking_loss(preds)
-            
-            
+
             test_cls_losses.append(sum(test_cls_losses))
             test_apn_losses.append(test_apn_loss)
             _, predicted1 = torch.max(logits[0], 1)
@@ -372,16 +406,18 @@ def test(testloader, iteration):
         # logger.scalar_summary('test_acc1', accuracy1.item(), iteration + 1)
         # logger.scalar_summary('test_acc2', accuracy2.item(), iteration + 1)
         # logger.scalar_summary('test_acc3', accuracy3.item(), iteration + 1)
-        print(" [*] Iter %d || Test accuracy1: %.4f, Test accuracy2: %.4f, Test accuracy3: %.4f" % (
-            iteration, accuracy1.item(), accuracy2.item(), accuracy3.item()))
-        log_val['iter'] = iteration + 1
-        log_val['test_cls_loss'] = test_cls_losses.item()
-        log_val['test_rank_loss'] = test_apn_losses.item()
-        log_val['test_acc1'] = accuracy1.item()
-        log_val['test_acc2'] = accuracy1.item()
-        log_val['test_acc3'] = accuracy1.item()
-        #wandb.log(log_val)
-    
+        print(
+            " [*] Iter %d || Test accuracy1: %.4f, Test accuracy2: %.4f, Test accuracy3: %.4f"
+            % (iteration, accuracy1.item(), accuracy2.item(), accuracy3.item())
+        )
+        log_val["iter"] = iteration + 1
+        log_val["test_cls_loss"] = test_cls_losses.item()
+        log_val["test_rank_loss"] = test_apn_losses.item()
+        log_val["test_acc1"] = accuracy1.item()
+        log_val["test_acc2"] = accuracy1.item()
+        log_val["test_acc3"] = accuracy1.item()
+        # wandb.log(log_val)
+
     net.train()
 
 
@@ -389,10 +425,10 @@ def test(testloader, iteration):
 def adjust_learning_rate(optimizer, gamma, steps, _lr):
     lr = _lr * (gamma ** (steps))
     for param_group in optimizer.param_groups:
-        param_group['lr'] = lr
+        param_group["lr"] = lr
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     train()
-    #print(get_format_num(1.2324234234234, points=5))
+    # print(get_format_num(1.2324234234234, points=5))
     print(" [*] Train done")
