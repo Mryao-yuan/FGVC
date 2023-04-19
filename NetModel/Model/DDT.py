@@ -8,8 +8,6 @@ import numpy as np
 from torch import nn
 from skimage import measure
 import cv2
-
-# from ImageSet import ImageSet
 import os.path as osp
 import os
 
@@ -195,8 +193,7 @@ def fit(image, pretrain_module):
         # h, w = img.shape[:2] w,h,c 模式
         h, w = img.shape[1:]  # c,w,h 模式
         img = img.view(1, 3, h, w)
-        output = pretrain_module(img)[0, :]
-
+        output = pretrain_module(img)[0, :]  # get feature of image
         output = output.view(512, output.shape[1] * output.shape[2])
         output = output.transpose(0, 1)
         descriptors = np.vstack((descriptors, output.detach().cpu().numpy().copy()))
@@ -207,6 +204,8 @@ def fit(image, pretrain_module):
     descriptors_mean = sum(descriptors) / len(descriptors)
     descriptors_mean_tensor = torch.FloatTensor(descriptors_mean)
     pca = PCA(n_components=1)  # 保留 1 个特征
+    if np.nan in descriptors:
+        print(descriptors)
     pca.fit(descriptors)
     trans_vec = pca.components_[0]
     return trans_vec, descriptors_mean_tensor
@@ -270,6 +269,7 @@ def co_locate(images, pretrained_model, trans_vector, descriptor_mean_tensor):
         featmap -= descriptor_mean_tensor.repeat(featmap.shape[0], 1).cuda()
         features = featmap.detach().cpu().numpy()
         del featmap
+        # 坐标关系矩阵
         P = np.dot(trans_vector, features.transpose()).reshape(h, w)
         mask = max_conn_mask(P, origin_height, origin_width)
         bboxes = get_bboxes(mask)
@@ -317,17 +317,15 @@ def co_locate(images, pretrained_model, trans_vector, descriptor_mean_tensor):
 class DDT_module(nn.Module):
     r"""主要功能找到输入一个batch图像的object,返回原始图像插值后的数据"""
 
-    def __init__(self, model) -> None:
+    def __init__(self, model):
         super(DDT_module, self).__init__()
         self.pretain_module = model
 
     def forward(self, x):
         trans_vectors, descriptor_means = fit(x, self.pretain_module)
-
         x, bboxes_list = co_locate(
             x, self.pretain_module, trans_vectors, descriptor_means
         )
-
         return x, bboxes_list
 
 

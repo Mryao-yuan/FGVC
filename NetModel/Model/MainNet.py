@@ -1,5 +1,5 @@
-from Model.DDT import DDT_module
 import torch
+from Model.DDT import DDT_module
 from torch import mode, nn
 import torchvision.models as models
 import sys
@@ -23,12 +23,12 @@ class MainNet(nn.Module):
     def forward(self, x,epoch,batch_idx,status='test'):
         origin_x  = x
         # 截取放大后的图像
-        # x,bboxes_list = self.ddt(x)
-        # # batch channel h w
-        # obj_img = x 
-        # x = torch.from_numpy(x).cuda()
+        x,bboxes_list = self.ddt(x)
+        # batch channel h w
+        obj_img = x 
+        x = torch.from_numpy(x).cuda()
         # 卷积提取特征分类
-        x = self.backbone(origin_x)
+        x = self.backbone(x)
         x = self.avgpool(x)
         x = x.view(x.size(0), -1)
         x = self.dropout(x)
@@ -37,40 +37,15 @@ class MainNet(nn.Module):
 
         # else :
            
-        #return obj_img,bboxes_list,x
-        return x
-
-# def getBackbone(backbone_name="vgg19", pretrained=True):
-#     # 获取主干网络及其预训练方式
-#     base_backbone = eval(backbone_name)(pretrained=pretrained)
-#     # 所有网络的子结构
-#     all_base_modules = [m for m in base_backbone.children()]
-
-#     backbone = None
-
-#     if backbone_name == "vgg16":
-#         feature_extractor = all_base_modules[0]
-#         backbone = feature_extractor[0:30]
-#     elif backbone_name == "vgg19":
-#         feature_extractor = all_base_modules[0]
-#         backbone = feature_extractor[0:35]
-#     elif backbone_name in ["resnet50", "resnet101"]:
-#         layers = all_base_modules[:-3]  # 不包含最后三个子模块
-#         backbone = nn.Sequential(*layers)
-#     else:
-#         print(backbone_name)
-#         raise NotImplementedError()
-
-#     return backbone
+        return obj_img,bboxes_list,x        
 
 
 if __name__ == "__main__":
     import os, sys
-
     # 当前文件的绝对路径
     root_path = os.path.abspath(__file__)
-
-    model = MainNet()
+    print(root_path)
+    model = MainNet(200,512)
     input = torch.randint(0, 255, (2, 448, 448, 3), dtype=torch.float)
     output = model(input)
     print(output.shape)

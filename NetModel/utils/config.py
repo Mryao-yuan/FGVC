@@ -1,7 +1,7 @@
 import argparse
 
 
-CUDA_VISIBLE_DEVICES = "3"
+CUDA_VISIBLE_DEVICES = "4"
 
 
 # 参数设置
@@ -54,7 +54,12 @@ def set_arg():
         metavar="N",
         help="number of total epochs to run",
     )
-    parser.add_argument("--eval_trainset", default=False, type=bool,help="Wether or not evaluate trainset")
+    parser.add_argument(
+        "--eval_trainset",
+        default=False,
+        type=bool,
+        help="Wether or not evaluate trainset",
+    )
     parser.add_argument(
         "--start-epoch",
         default=0,
@@ -108,7 +113,7 @@ def set_arg():
         metavar="PATH",
         help="path to latest checkpoint (default: none)",
     )
-    parser.add_argument("--init_lr", default=0.0001, type=float, help="learning rating")
+    parser.add_argument("--init_lr", default=0.001, type=float, help="learning rating")
 
     parser.add_argument(
         "-e",
@@ -130,7 +135,7 @@ def set_arg():
     parser.add_argument(
         "--input_size", default=448, type=int, help="the number of samples per class"
     )
-        
+
     return parser.parse_args()
 
 

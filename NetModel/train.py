@@ -9,10 +9,10 @@ from Dataset import dataset
 import os
 from Model.MainNet import MainNet
 from utils.config import set_arg
-from utils.write_log import write_log
+from utils.write_file import write_log
 from utils.auto_load_resume import auto_load_resume
 from utils.train_mode import train
-from utils.write_config import write_config
+from utils.write_file import write_config
 
 
 def main():
@@ -32,9 +32,9 @@ def main():
     criterion = nn.CrossEntropyLoss()
     # 参数
     parameters = model.parameters()
-
     # 加载checkpoint
-    save_path = os.path.join(args.model_path, args.set)
+    # save_path = os.path.join(args.model_path, args.set)
+    save_path = os.path.join(args.model_path, "DDT_CUB")
     if os.path.exists(save_path):
         start_epoch, lr = auto_load_resume(model, save_path, status="train")
         assert start_epoch < args.epochs

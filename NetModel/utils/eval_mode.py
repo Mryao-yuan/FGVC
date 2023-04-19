@@ -23,8 +23,8 @@ def eval(model, testloader, criterion, status, save_path, epoch):
             images = images.cuda()
             labels = labels.cuda()
             # object :[batch h w channel]
-            # object_imgs, bboxes_list, output = model(images, epoch, i, status)
-            output = model(images, epoch, i, status)
+            object_imgs, bboxes_list, output = model(images, epoch, i, status)
+            # output = model(images, epoch, i, status)
             # 单个 epoch 的损失
             local_loss = criterion(output, labels)
             # 损失累加

@@ -1,3 +1,4 @@
+from utils.write_file import write_log, write_config
 import os
 import glob
 import torch
@@ -43,8 +44,9 @@ def train(
             # 梯度清零
             optimizer.zero_grad()
             # object :[batch h w channel]
-            # (object_img, bboxes_list, output) = model(images, epoch, i)
-            output = model(images, epoch, i)
+            (object_img, bboxes_list, output) = model(images, epoch, i)
+            # 仅仅使用VGG
+            # output = model(images, epoch, i)
             # 计算损失
             cls_loss = criterion(output, labels)
 
@@ -55,13 +57,14 @@ def train(
         scheduler.step()
         # evaluation every epoch
         if eval_trainset:
+            eval_traindatase_data = {}
             loss_avg, local_accuracy = eval(
                 model, trainloader, criterion, "train", save_path, epoch
             )
-            # raw accuracy: 原始的准确率
-            # local accuracy: 根据对象部位分类准确率
-
             print("[Train set] cls accuary:{:.2f}%".format(100.0 * local_accuracy))
+            eval_traindatase_data["local_acc"] = round(local_accuracy * 100, 2)
+            eval_traindatase_data["loss_avg"] = round(loss_avg, 2)
+            write_log(file="train.txt", epoch=epoch, obj=eval_traindatase_data)
             # 记录最大的准确率值及其epoch
             # if raw_accuracy > train_max[0][0]:
             #     train_max[0][0] = round(raw_accuracy, 2)
@@ -86,11 +89,15 @@ def train(
                 writer.add_scalar("Train/loss_avg", loss_avg, epoch)
 
         # eval testset
-
+        eval_testdatase_data = {}
         loss_avg, local_accuracy = eval(
             model, testloader, criterion, "test", save_path, epoch
         )
         print("[Test set] cls accuary:{:.2f}%".format(100.0 * local_accuracy))
+        eval_testdatase_data["local_acc"] = round(local_accuracy * 100, 2)
+        eval_testdatase_data["loss_avg"] = round(loss_avg, 2)
+        write_log(file="test.txt", epoch=epoch, obj=eval_testdatase_data)
+        # 记录当前最大的准确率
         if local_accuracy > max_eval_acc:
             max_eval_acc = local_accuracy
             save_status = True
